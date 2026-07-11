@@ -1,0 +1,68 @@
+/* ---- Color Scheme --- 
+terra cotta #E07A5F
+deep slate blue #3D405B,
+*/
+
+/*** SITE WIDE *****/
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/*** Header ***/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: end;
+    padding: 5px 0 5px 10px;
+    column-gap: 8px;
+    border-bottom: solid 1px #ddd;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3d405b;
+}
+
+/** Nav **/
+.navigation {
+    display: none;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+/*** Handburger Navigation ***/
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #3d405b;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
