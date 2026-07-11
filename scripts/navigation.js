@@ -1,17 +1,12 @@
+
 //Store the selected elements that we are going to use.
-const navButton = document.querySelector('#ham-btn');
+const hamButton = document.querySelector("#ham-btn");
+const navigation = document.querySelector("#nav-bar");
 
 //Toggle the class off and on
-navButton.addEventListener('click', () => {
-    navButton.classList.toggle('show');
-    navBar.classList.toggle('show'); 
+hamButton.addEventListener("click", () => {
+
+    navigation.classList.toggle("show");
+    hamButton.classList.toggle("show");
+
 });
-
-//Nav links
-const navBar = document.querySelector('#nav-bar');
-
-
-const daysUntil = "There are " + daycount + " days until " + targetEvent + "!";
-
-
-const daysUntil = `There are ${daycount} days until ${targetEvent}!`;

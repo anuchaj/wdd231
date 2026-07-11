@@ -1,0 +1,48 @@
+@media only screen and (min-width: 768px){
+
+#ham-btn{
+    display:none;
+}
+
+.navigation{
+    display:block;
+}
+
+.navigation ul{
+    display:flex;
+}
+
+.navigation li{
+    flex:1;
+}
+
+.navigation a{
+    text-align:center;
+}
+
+.top-cards{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:1rem;
+    margin-bottom:1rem;
+}
+
+.buttons{
+    justify-content:space-evenly;
+}
+
+#courses{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+}
+
+.course{
+    margin:0;
+}
+
+footer{
+    margin-top:2rem;
+}
+
+}
