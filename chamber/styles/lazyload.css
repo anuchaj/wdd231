@@ -1,0 +1,174 @@
+/* Discover Page */
+main.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  gap: 20px;
+}
+
+.discover img {
+  margin-top: 0;
+  max-width: 300px;
+  transition: all .3s ease-in-out;
+}
+
+/*main.discover img[data-src] {
+  filter: blur(0.2em);
+}
+
+main.discover img {
+  filter: blur(0em);
+  transition: filter 0.5s;
+}*/
+
+
+main div {
+  max-width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: auto;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@media only screen and (min-width: 37.5em) {
+
+  main.discover {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 400px 400px 400px 400px 1fr;
+    margin: auto;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .discover div {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .discover div:hover {
+    -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+  }
+
+  .discoverTitle {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  div.sunset {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  div.church {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  div.restaurants {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  div.food {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  div.offices {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  div.cc {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  div.plaza {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+
+  div.night {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  div.theater {
+    width: 281px;
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+  main.discover {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 400px 400px 1fr;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .discoverTitle {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  div.sunset {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  div.church {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  div.restaurants {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  div.food {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  div.offices {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  div.cc {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  div.plaza {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  div.night {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  div.theater {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "companies": [
+    {
+      "membership": "Gold",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/apples-logo.webp",
+      "name": "Apples",
+      "address": "Los Altos, California, United States",
+      "phone": "+1 800–275–2273",
+      "website": "www.apple.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/amazon-logo.webp",
+      "name": "Amazon",
+      "address": "Bellevue, Washington, United States",
+      "phone": "+1-888-280-4331",
+      "website": "www.amazon.com"
+    },
+    {
+      "membership": "Silver",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/ibm-logo.png",
+      "name": "IBM",
+      "address": "Armonk, New York, United States",
+      "phone": "+1-800-426-4968",
+      "website": "www.ibm.com"
+    },
+    {
+      "membership": "Gold",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/google-logo.webp",
+      "name": "Google",
+      "address": "Mountain View, California, United States",
+      "phone": "+1-866-246-6453",
+      "website": "www.google.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/sap-logo.webp",
+      "name": "SAP",
+      "address": "Walldorf, Germany",
+      "phone": "+234-1-2776400",
+      "website": "www.sap.com"
+    },
+    {
+      "membership": "Silver",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/microsoft-logo.webp",
+      "name": "Microsoft",
+      "address": "Redmond, Washington, United States",
+      "phone": "01 271 0156",
+      "website": "www.microsoft.com"
+    },
+    {
+      "membership": "Gold",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/intel-logo.webp",
+      "name": "Intel",
+      "address": "Santa Clara, California, United States",
+      "phone": "+1-800-538-3373",
+      "website": "www.intel.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/nvidia-logo.png",
+      "name": "Nvidia",
+      "address": "Santa Clara, California, United States",
+      "phone": "+1-408-486-2000",
+      "website": "www.nvidia.com"
+    },
+    {
+      "membership": "Silver",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/lenovo-logo.png",
+      "name": "Lenovo",
+      "address": "Quarry Bay, Hong Kong",
+      "phone": "+1-800-4199-733",
+      "website": "www.lenovo.com"
+    },
+    {
+      "membership": "Silver",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/airbnb-logo.png",
+      "name": "Airbnb",
+      "address": "San Francisco, California, United States",
+      "phone": "+1-855-635-7754",
+      "website": "www.airbnb.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/facebook-logo.png",
+      "name": "Facebook",
+      "address": "Menlo Park, California, United States",
+      "phone": "+1-650-543-4800",
+      "website": "www.facebook.com"
+    },
+    {
+      "membership": "Silver",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/cisco-logo.png",
+      "name": "Cisco",
+      "address": "San Jose, California, United States",
+      "phone": "+1-800-553-2447",
+      "website": "www.cisco.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/dell-logo.png",
+      "name": "Dell",
+      "address": "Round Rock, Texas, United States",
+      "phone": "+1-866-795-5597",
+      "website": "www.dell.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/twitter-logo.png",
+      "name": "Twitter",
+      "address": "San Francisco, California, United States",
+      "phone": "+1-415-222-9670",
+      "website": "www.twitter.com"
+    },
+    {
+      "membership": "Bronze",
+      "imageurl": "https://anuchaj.github.io/wdd230/chamber/images/in-logo.png",
+      "name": "LinkedIn",
+      "address": "Sunnyvale, California, United States",
+      "phone": "+1-650-687-3555",
+      "website": "www.linkedin.com"
+    }
+  ]
+}

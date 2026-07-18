@@ -1,0 +1,251 @@
+
+main.contact {
+    display: grid;
+    background-color: #EAEBED;
+}
+
+.contact aside.address {
+    display: block;
+    padding-left: 1em;
+}
+
+.address p {
+    margin: 0;
+    padding: 10px;
+}
+
+.address h3 {
+    margin: 0.3em 0;
+    align-self: center;
+}
+
+.address h1 {
+    margin: 0.25em 0;
+    padding: 0;
+    color: #006989;
+}
+
+form legend {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #006989;
+}
+
+form fieldset {
+    border: none;
+    font-size: 1.5em;
+    padding-block-end: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+    padding-block-start: 0;
+    margin-inline-start: 0;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+}
+
+form label.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75em;
+    font-size: 1em;
+    max-width: 25rem;
+}
+
+form input.submitBtn {
+    width: 100%;
+    height: 44px;
+    margin: 0 0 1em 0;
+    font-size: 2em;
+    font-weight: 600;
+    border-radius: 15px;
+    background-color: #FE654F;
+    border: none;
+}
+
+.contact input.submitBtn {
+    width: 94%;
+    margin: 0 10px 10px 10px;
+}
+
+.contact form label.info input, .contact label.info textarea {
+    max-width: 90%;
+    padding-left: 1em;
+    background-color: #EAEBED;
+    border: none;
+    border-bottom: groove;
+    border-radius: 0;
+}
+
+form label.info textarea {
+    height: 3rem;
+    margin-bottom: 0.5em;
+}
+
+form label.info input, form label.info textarea {
+    border-radius: 0.25em;
+    padding: 5px 10px;
+}
+
+
+
+@media only screen and (min-width: 36rem){
+    aside.address {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+
+    .contact fieldset {
+        padding: 1em 0 1em 1em;
+    }
+
+    .contact h3 {
+        align-self: start;
+    }
+
+    .contact input.submitBtn {
+    width: 13em;
+    margin: 0 10px;
+    padding: 0 0 0 10px;
+    }
+
+    .contact form fieldset:nth-child(1) {
+        margin: 0;
+    }
+}
+
+
+
+@media only screen and (min-width: 60rem) {
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5em;
+        background-color: #EAEBED;
+    }
+
+    .address{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin: 2em 1em;
+        display: block;
+    }
+
+    .contact form {
+        border: 5px solid #6B4B3E;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 0 0 5em #6B4B3E;
+        max-width: 960px;
+        margin: 0 auto;
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    form fieldset {
+        font-size: 1em;
+    }
+
+    form label.info {
+        margin: 10px 0;
+    }
+
+    form label.info textarea {
+        margin-bottom: 0;
+    }
+
+    form legend {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+/* Contact 
+main div.placeholder {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    border: 2px solid gray;
+    padding: 1rem;
+    margin-bottom: 15px;
+    background-color: #006989;
+    margin-top: 1em;
+}
+main div.placeholder div {
+    display: block;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 10px;
+}
+
+.thanks {
+    margin: 1em 1em 1em 1em;
+}
+aside {
+    display: none;
+}
+
+.contact aside.contact {
+    display: block;
+    padding-left: 1em;
+}
+
+.contact h1 {
+    padding-left: 1em;
+    color: #006989;
+}
+.contact h2 {
+    display: none;
+}
+.contact {
+    display: grid;
+    background-color: #EAEBED;
+}
+.contact form label.info input, .contact label.info textarea{
+    max-width: 90%;
+    padding-left: 1em;
+    background-color: #EAEBED ;
+    border: none;
+    border-bottom: groove;
+    border-radius: 0;
+}
+.contact label.info textarea::placeholder{
+    padding-top: .5em;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.contact p {
+    margin: 0;
+    padding: 10px;
+}
+.contact h3 {
+    margin: .3em 0 ;
+    align-self: center;
+}
+.contact h1 {
+    margin: .25em 0;
+    padding: 0;
+}
+.contact aside.contact {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+}
+.contact fieldset {
+    padding: 10px;
+}
+.contact input.submitBtn {
+    width: 94%;
+    margin: 0 10px 10px 10px;
+}
+.hours {
+    grid-column: 1/3;
+}
+.attr {
+    padding: 10px 10px 0 10px;
+}
+
+*/

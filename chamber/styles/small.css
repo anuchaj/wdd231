@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,500&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;700&display=swap');
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+:root {
+    --main-color: #EFF6FB;
+    --second-color: #FFE2C2;
+    --third-color: #001D3D;
+    --accent-two: #0E4749;
+    --header-font: "Lora", "Roboto", serif;
+    --paragraph-font: "Montserrat", "Open Sans", sans-serif;
+}
+
+/*header and navigation code */
+header {
+    /*background-image: url("../images/banner1.jpg");*/
+    background-color: var(--accent-two);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    color: white;
+    font-family: var(--header-font);
+}
+
+/* banner */
+#banner_msg {
+    text-align: center;
+    margin: 10px;
+    padding: 8px;
+    background-color: whitesmoke;
+    color: var(--third-color);
+}
+
+.banner {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    background-color: var(--third-color);
+}
+
+.menu_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    margin: 0px 20px;
+}
+
+.menu_btn {
+    margin: auto;
+}
+
+.bar_wide {display: none;}
+
+button#hamburgerBtn {
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--main-color);
+    font-size: 2.2rem;
+    border-color: rgb(187, 187, 187);
+    margin: 1rem .5rem .5rem;
+}
+
+#hd-logo {
+    margin-right: 0px;
+    margin-top: 3px;
+}
+
+#hd-logo img {
+    width: 80px;
+    margin: auto 0px;
+}
+
+
+.compName {
+    margin: auto 0px;
+}
+
+#compName_line1 {
+    margin: auto 0px;
+    font-size: 20px;
+    padding-left: 0px;
+}
+
+#compName_line2 {
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.social_icons {
+    display: flex;
+    margin: auto;
+}
+.social_icons img {
+    width: 30px;
+    padding: 2px;
+}
+
+.nav_bar {
+    grid-column: 1 / 4;
+    grid-row: 3 / 3;
+}
+
+.date {
+    grid-column: 1 / 5;
+    grid-row: 4 / 4;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: none;
+    background-color: transparent;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5%;
+    border-top: 1px solid rgb(178, 178, 178);
+}
+
+nav ul li a:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+nav ul.open{
+    display: block;
+    padding-right: 20%;
+    
+}
+
+
+.date {
+    /*grid-column: 1 / span 5;
+    grid-row: 3 / span 1;*/
+
+    text-align: center;
+    padding: 1em;
+    margin: .5em;
+    background-color: var(--main-color);
+    color: var(--third-color);
+    font-family: var(--paragraph-font);
+}
+
+#hamburgerBtn span:nth-child(1){display: block;}
+#hamburgerBtn span:nth-child(2){display: none;}
+
+#hamburgerBtn.open span:nth-child(1){display: none;}
+#hamburgerBtn.open span:nth-child(2){display: block;}
+
+/* set fonts*/
+h1, h2, h3, h4{
+    font-family: var(--header-font);
+}
+p, a{
+    font-family: var(--paragraph-font);
+}
+
+
+/* Here is the code for the main section */
+
+main .events, .localWthr, .localNews, .spotlight, .joinUs {
+    height: auto;
+    padding: 1rem;
+    background-color: rgb(246, 246, 246);
+    margin-top: 1em;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+/* Hero */
+
+main div.hero{
+    position: relative;
+}
+
+.heroImg {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* object-fit: cover; */
+    margin-bottom: 1em;
+}
+
+.heroBtn {
+    position: absolute;
+    background-color: rgb(240, 240, 240, 0.5); 
+    color: var(--third-color);
+    padding: .5rem .5rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    height: auto;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.heroBtn:hover {
+    background-color: #99aa38;
+    font-weight: bold;
+}
+
+.welcome_txt {
+    position: absolute;
+    color: #99aa38;
+    /* background-color: rgb(240, 240, 240, 0.8);*/
+    text-shadow: 2px 0 0 rgb(21, 28, 94), -2px 0 0 rgb(21, 28, 94), 0 2px 0 rgb(21, 28, 94), 0 -2px 0 rgb(21, 28, 94), 1px 1px rgb(21, 28, 94), -1px -1px 0 rgb(21, 28, 94), 1px -1px 0 rgb(21, 28, 94), -1px 1px 0 rgb(21, 28, 94);
+    /* text-decoration: overline; */
+    top: .1rem;
+    left: .1rem;
+    padding: .5rem .5rem;
+    font-size: 2rem;
+    border-color: transparent;
+}
+
+/* Event */
+main .events {
+    text-align: center;
+    justify-content: center;
+}
+
+.events h1, .events h2, .events p {
+    margin: .5rem auto;
+    color:  rgb(21, 28, 94); 
+}
+
+.events h2, .events p {
+    color:  black; 
+}
+
+.events a {
+    text-decoration: none;
+    color:#834302;
+}
+.events a:hover {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+main div.events h1, div.localNews h1 {
+    color: rgb(21, 28, 94);
+}
+
+/* Weather */
+.localWthr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 1fr 1em 1em 2em;
+}
+
+.localWthr div.weatherIcon {
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+.localWthr p span.temp {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.localWthr h1, .localWthr p {
+    margin: 0;
+}
+
+.localWthr h1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    color: var(--third-color);
+}
+
+.localWthr .description {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.localWthr hr {
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.localWthr .windS {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.localWthr .windSpeed {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.localWthr .windC {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+.localWthr .windChill {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.localWthr #weatherIcon {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    max-width: 85%;
+    justify-self: center;
+    margin: 0;
+}
+
+.localWthr p.description {
+    color: black;
+    justify-self: right;
+    margin-right: 10px;
+}
+
+.localWthr p {
+    color: black;
+    justify-self: center;
+}
+
+.localWthr p.degree {
+    font-size: 2.5rem;
+    color: #822f03;
+    justify-self: center;
+    align-self: center;
+    font-weight: 600;
+}
+
+/* News */
+.localNews {
+    text-align: center;
+    color: rgb(21, 28, 94);
+}
+
+.localNews p {
+    color: black;
+}
+
+/* Spots */
+main div.spots {
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+section.spots {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+main div.spots h2 {
+    color: rgb(21, 28, 94);
+}
+
+section.spots:nth-child(3) {
+    display: none;
+}
+
+/* Join Us - Sport Three hidden */
+.joinUs {
+    display: none;
+}
+
+/* Here is the footer*/
+footer{
+    text-align: center;
+    background-color: #00272b;
+    color: white;
+    padding: 5%;
+}
+
+footer .logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.map, a.openWeather {
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+}
+
+footer h5{
+    font-size: 20px;
+    margin-bottom: -2%;
+    margin-top: 0px;
+}
+
+footer .very-bottom{
+    border-top: 1px solid white;
+    font-size: 12px;
+}
+footer .very-bottom p:nth-child(2){
+    font-weight: 700;
+}
