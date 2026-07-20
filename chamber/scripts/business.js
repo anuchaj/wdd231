@@ -1,4 +1,4 @@
-const requestURL = 'https://anuchaj.github.io/wdd230/chamber/data/companies.json';
+const requestURL = 'https://anuchaj.github.io/wdd231/chamber/data/members.json';
 //const requestURL = "../data/companies.json";
 
 fetch(requestURL)
