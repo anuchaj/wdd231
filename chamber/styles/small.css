@@ -10,6 +10,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     --second-color: #FFE2C2;
     --third-color: #001D3D;
     --accent-two: #0E4749;
+    --navy:#151c5e;
+    --footer:#00272b;
     --header-font: "Roboto", sans-serif;
     --paragraph-font: "Montserrat", sans-serif;
 }
@@ -21,7 +23,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    color: white;
+    color: var(--main-color);
     font-family: var(--header-font);
 }
 
@@ -205,7 +207,7 @@ main div.hero{
     position: absolute;
     color: #99aa38;
     /* background-color: rgb(240, 240, 240, 0.8);*/
-    text-shadow: 2px 0 0 rgb(21, 28, 94), -2px 0 0 rgb(21, 28, 94), 0 2px 0 rgb(21, 28, 94), 0 -2px 0 rgb(21, 28, 94), 1px 1px rgb(21, 28, 94), -1px -1px 0 rgb(21, 28, 94), 1px -1px 0 rgb(21, 28, 94), -1px 1px 0 rgb(21, 28, 94);
+    text-shadow: 2px 0 0 var(--navy), -2px 0 0 var(--navy), 0 2px 0 var(--navy), 0 -2px 0 var(--navy), 1px 1px var(--navy), -1px -1px 0 var(--navy), 1px -1px 0 var(--navy), -1px 1px 0 var(--navy);
     /* text-decoration: overline; */
     top: .1rem;
     left: .1rem;
@@ -222,11 +224,11 @@ main .events {
 
 .events h1, .events h2, .events p {
     margin: .5rem auto;
-    color:  rgb(21, 28, 94); 
+    color: var(--navy); 
 }
 
 .events h2, .events p {
-    color:  black; 
+    color:  #000; 
 }
 
 .events a {
@@ -239,7 +241,7 @@ main .events {
 }
 
 main div.events h1, div.localNews h1 {
-    color: rgb(21, 28, 94);
+    color: var(--navy);
 }
 
 /* Weather */
@@ -309,13 +311,13 @@ main div.events h1, div.localNews h1 {
 }
 
 .localWthr p.description {
-    color: black;
+    color: #000;
     justify-self: right;
     margin-right: 10px;
 }
 
 .localWthr p {
-    color: black;
+    color: #000;
     justify-self: center;
 }
 
@@ -330,18 +332,18 @@ main div.events h1, div.localNews h1 {
 /* News */
 .localNews {
     text-align: center;
-    color: rgb(21, 28, 94);
+    color: var(--navy);
 }
 
 .localNews p {
-    color: black;
+    color: #000;
 }
 
 /* Spots */
 main div.spots {
     margin: 0;
     text-align: center;
-    color: black;
+    color: #000;
 }
 
 section.spots {
@@ -353,7 +355,7 @@ a {
 }
 
 main div.spots h2 {
-    color: rgb(21, 28, 94);
+    color: var(--navy);
 }
 
 section.spots:nth-child(3) {
@@ -368,7 +370,7 @@ section.spots:nth-child(3) {
 /* Here is the footer*/
 footer{
     text-align: center;
-    background-color: #00272b;
+    background-color: var(--footer);
     color: white;
     padding: 5%;
 }
@@ -381,7 +383,7 @@ footer .logo{
 
 a.map, a.openWeather {
     text-decoration: none;
-    color: white;
+    color: var(--main-color);
     margin: 0px;
 }
 
@@ -392,7 +394,7 @@ footer h3{
 }
 
 footer .very-bottom{
-    border-top: 1px solid white;
+    border-top: 1px solid var(--main-color);
     font-size: 12px;
 }
 footer .very-bottom p:nth-child(2){

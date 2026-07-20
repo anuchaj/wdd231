@@ -42,7 +42,11 @@ main {
   text-align: center;
 }
 
-button {
+#directoryBttn {
+  text-align: center;
+}
+
+#directoryBttn button {
   text-align: center;
   text-decoration: none;
   font-size: 50px;
@@ -50,17 +54,17 @@ button {
   color: #ccc;
   border-radius: 5px;
   padding: 0.1em;
-  margin-left: 21%;
+  /* margin-left: 21%; */
   padding-left: 15px;
   padding-right: 15px;
 }
 
-button:hover {
+#directoryBttn button:hover {
   background-color: rgb(15, 21, 70);
   color: white;
 }
 
-button:focus, button:active {
+#directoryBttn button:focus, #directoryBttn button:active {
   background-color: rgb(15, 21, 70);
   color: white;
 }
@@ -133,10 +137,11 @@ button.open {
   margin-top: 30px;
 }
 
-#cards.open p, a {
-  margin: auto;
-  margin-left: 10px;
-  padding: 0;
+#cards.open p,
+#cards.open a {
+    margin:auto;
+    margin-left:10px;
+    padding:0;
 }
 
 #cards.open img {
