@@ -16,7 +16,8 @@
         <meta property="og:site_name" content="Aba Chamber of Commerce">
 
         <!-- Site Icon -->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
         <!-- <link rel="shortcut icon" href="images/logo-img.webp">-->
 
         <!-- CSS Files -->
@@ -27,10 +28,6 @@
         <link rel="stylesheet" href="styles/large.css">
         <link rel="stylesheet" href="styles/directory.css">
 
-        <!-- Pre load other related pages -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +35,9 @@
         
         <!-- Title -->
         <title>Aba Chamber of Commerce | Directory</title>
+
+        <script src="scripts/business.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
 
 <body>
@@ -97,8 +97,8 @@
   <main class="directory">
     <h1>Business Directory</h1>
     <div id="directoryBttn">
-      <button id="grid" onclick="gridView()">᎒᎒᎒</button>
-      <button id="list" onclick="listView()">᎒☰</button>
+      <button id="grid">᎒᎒᎒</button>
+      <button id="list">᎒☰</button>
     </div>
     <div id="cards"></div>
   </main>
@@ -112,16 +112,15 @@
         </picture> 
     </a>
     <section>
-        <h5>Aba Chamber of Commerce</h5>
+        <h3>Aba Chamber of Commerce</h3>
         <p>P.O. Box 450102, Aba, Nigeria</p>
-        <p><a class="openWeather" href="https://openweathermap.org/" 
-            style="text-decoration: none;">Weather Info from OpenWeather.org</a>
+        <p><a class="openWeather" href="https://openweathermap.org/">Weather Info from OpenWeather.org</a>
         </p> 
     </section>
     <section>
         <p>info@abachambers.com</p>
         <p>+234 (806) 432 7684</p>
-        <p><a class="map" href=https://tinyurl.com/abainthemap>📍 Location Map</a></p>
+        <p><a class="map" href="https://tinyurl.com/abainthemap">📍 Location Map</a></p>
         <!--<p><a class="map" href=https://www.google.com/maps/place/Aba/@5.1167963,7.2969047,12z/data=!3m1!4b1!4m5!3m4!1s0x104299308f30fbf3:0x98345ebf0c8cbca1!8m2!3d5.1215877!4d7.3732655>📍 Location Map</a></p> -->
     </section>
     <section class="very-bottom">
@@ -131,10 +130,6 @@
         <section id="timemod"></section>
     </section>
   </footer>
-
-  <script src="scripts/business.js"></script>
-  <script src="scripts/main.js"></script>
-
 </body>
   
 </html>

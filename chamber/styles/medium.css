@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,500&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;700&display=swap');
-
-:root {
-    --main-color: #EFF6FB;
-    --second-color: #FFE2C2;
-    --third-color: #001D3D;
-    --accent-two: #0E4749;
-    --header-font: "Lora", "Roboto", serif;
-    --paragraph-font: "Montserrat", "Open Sans", sans-serif;
-}
-
-
 @media only screen and (min-width: 36rem){
 
     /*header and navigation code */
