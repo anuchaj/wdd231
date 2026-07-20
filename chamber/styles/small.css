@@ -387,8 +387,9 @@ a.map, a.openWeather {
     margin: 0px;
 }
 
-footer h3{
+footer section h2.footerTitle {
     font-size: 20px;
+    margin: 0;
     margin-bottom: -2%;
     margin-top: 0px;
 }

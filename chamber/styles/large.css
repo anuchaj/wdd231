@@ -217,7 +217,8 @@
         text-align: left;
     }
 
-    footer h3{
+    footer section h2.footerTitle {
+        text-align: left;
         font-size: 32px;
         margin-top: 0;
     }
