@@ -213,6 +213,10 @@
     }
 
     /* footer*/
+    .footer_title {
+        margin-left: 0;
+        text-align: left;
+    }
     footer section:nth-child(2) {
         text-align: left;
     }

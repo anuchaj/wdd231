@@ -329,6 +329,11 @@ main div.events h1, div.localNews h1 {
     font-weight: 600;
 }
 
+hr {
+    width: 90%;
+    text-align: center;
+}
+
 /* News */
 .localNews {
     text-align: center;
