@@ -113,7 +113,7 @@
         margin: 0;
   	}
 
-    main .events h1 {
+    main .events h2 {
         font-size: 2rem;
     }
 
@@ -200,8 +200,9 @@
         display: block;
     }
 
-	/* Join Us */
-	main .joinUs {
+	/* Forecast */
+	main .forecast-section {
+        display: block;
         grid-column: 1/2;
         grid-row: 3/4;
         margin: 0;
@@ -210,6 +211,20 @@
     h1 {
         font-family: var(--header-font);
         color: rgb(1, 41, 56);
+    }
+
+    .forecast {
+        text-align: center;
+    }
+
+    .forecast-card {
+        display: flex;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .forecast-card img {
+        width: 50px;
     }
 
     /* footer*/

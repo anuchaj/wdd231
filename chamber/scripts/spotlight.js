@@ -1,74 +1,121 @@
-const requestURL = 'https://anuchaj.github.io/wdd230/chamber/data/companies.json';
-//const requestURL = "../data/companies.json";
+// ======================================================
+// spotlight.js
+// WDD 231 - Chamber of Commerce
+//
+// This script loads chamber member data from the JSON
+// file and randomly displays three Gold or Silver
+// members in the Spotlight section.
+// ======================================================
 
-fetch(requestURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonObject) {
-    const business = jsonObject['companies'];
+// ------------------------------------------------------
+// JSON Data Source
+// ------------------------------------------------------
+const spotlightURL =
+    "https://anuchaj.github.io/wdd231/chamber/data/members.json";
 
-    let randomMembers = []; // array to store selected members
-    let member = "";
-    let count = 0; // to keep track of the number of members needed
-    while (count < 3) {
-      member = business[Math.floor(Math.random() * business.length)]; // bring the lenght of members to absolute
-      if (member.membership == "Gold" || member.membership == "Silver" ){ // checks membership status
-        if (!randomMembers.includes(member)) { // 'includes' is used to check to see if member doesn't already exist in the list.
-          randomMembers.push(member); // adds member to the selected list
-          count++;
+// ------------------------------------------------------
+// Retrieve member data
+// ------------------------------------------------------
+async function getSpotlightMembers() {
+
+    try {
+
+        const response = await fetch(spotlightURL);
+
+        if (!response.ok) {
+            throw new Error("Unable to load member data.");
         }
-      }
+
+        const data = await response.json();
+
+        // Access the companies array
+        const companies = data.companies;
+
+        displaySpotlights(companies);
+
+    } catch (error) {
+
+        console.error("Spotlight Error:", error);
+
     }
-    //console.log(randomMembers);
-    randomMembers.forEach(displayCard);
-    //business.forEach(displayCard); 
-  });
 
+}
 
-//let count = 0;
+// ------------------------------------------------------
+// Select three random Gold/Silver members
+// ------------------------------------------------------
+function displaySpotlights(companies) {
 
-function displayCard(biz) {
-    //if (count <= 3) { // Check count status
+    // Keep only Gold and Silver members
+    const qualifiedMembers = companies.filter(company =>
+        company.membership === "Gold" ||
+        company.membership === "Silver"
+    );
 
-    //Check if condition is true
-    //if (biz.membership == "Gold" || biz.membership == "Silver") {
-        
-    // Create elements to add to the document
-    let card = document.createElement('section');
-    card.setAttribute("class", "spots");
-    let businessName = document.createElement('p');
-    let address = document.createElement('p');
-    let phoneNum = document.createElement('p');
-    let website = document.createElement('a');
-    let portrait = document.createElement('img');
-    let membership = document.createElement('p');
-    let hr = document.createElement('hr')
+    // Shuffle the array randomly
+    qualifiedMembers.sort(() => Math.random() - 0.5);
 
-    // Change the textContent property of the elements to contain the biz's details
-    membership.textContent = biz.membership;
-    businessName.textContent = biz.name;
-    address.textContent = biz.address;
-    phoneNum.textContent = biz.phone;
-    website.textContent = biz.website;
+    // Select the first three members
+    const selectedMembers = qualifiedMembers.slice(0, 3);
 
-    // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
-    portrait.setAttribute('src', biz.imageurl);
-    portrait.setAttribute('alt', 'Logo of ' + biz.name);
-    portrait.setAttribute('loading', 'lazy');
+    // Display each spotlight card
+    selectedMembers.forEach(createSpotlightCard);
 
-    // Add/append the section(card) with the businessName element
-    card.appendChild(portrait);
-    card.appendChild(businessName);
+}
+
+// ------------------------------------------------------
+// Create a Spotlight Card
+// ------------------------------------------------------
+function createSpotlightCard(company) {
+
+    // Locate the spotlight container
+    const spotlightContainer = document.querySelector(".spotlight");
+
+    // Create card elements
+    const card = document.createElement("section");
+    const logo = document.createElement("img");
+    const companyName = document.createElement("h3");
+    const address = document.createElement("p");
+    const phone = document.createElement("p");
+    const membership = document.createElement("p");
+    const website = document.createElement("a");
+    const divider = document.createElement("hr");
+
+    // Add class for CSS styling
+    card.classList.add("spots");
+
+    // Company information
+    companyName.textContent = company.name;
+    address.textContent = company.address;
+    phone.textContent = company.phone;
+    membership.textContent = `${company.membership} Member`;
+
+    // Website link
+    website.href = company.website;
+    website.target = "_blank";
+    website.rel = "noopener";
+    website.textContent = company.website;
+
+    // Company logo
+    logo.src = company.imageurl;
+    logo.alt = `Logo of ${company.name}`;
+    logo.loading = "lazy";
+
+    // Assemble the card
+    card.appendChild(logo);
+    card.appendChild(companyName);
     card.appendChild(address);
-    card.appendChild(phoneNum);
+    card.appendChild(phone);
     card.appendChild(membership);
     card.appendChild(website);
-    card.appendChild(hr);
+    card.appendChild(divider);
 
-    // Add/append the existing HTML div with the spotlight class with the section(card)
-    document.querySelector('.spotlight').appendChild(card);
-    //}
-        //count += 1;
-    //}
+    // Display on the page
+    spotlightContainer.appendChild(card);
+
 }
+
+// ------------------------------------------------------
+// Initialize Spotlight Section
+// ------------------------------------------------------
+getSpotlightMembers();

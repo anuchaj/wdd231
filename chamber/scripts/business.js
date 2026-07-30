@@ -1,62 +1,167 @@
-const requestURL = 'https://anuchaj.github.io/wdd231/chamber/data/members.json';
-//const requestURL = "../data/companies.json";
+// ======================================================
+// business.js
+// WDD 231 - Chamber of Commerce
+//
+// This script loads all chamber business members from
+// the JSON data source and displays them on the
+// Directory page.
+//
+// Features:
+// - Dynamically creates business cards
+// - Displays company information
+// - Supports grid/list view switching
+// ======================================================
 
-fetch(requestURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonObject) {
-    const business = jsonObject['companies'];
-   
-    business.forEach(displayCard);
-  });
+
+// ------------------------------------------------------
+// JSON Data Source
+// ------------------------------------------------------
+const businessURL =
+    "https://anuchaj.github.io/wdd231/chamber/data/members.json";
 
 
-function displayCard(biz) {
-    // Create elements to add to the document
-    let card = document.createElement('section');
-    let businessName = document.createElement('p');
-    let address = document.createElement('p');
-    let phoneNum = document.createElement('p');
-    let website = document.createElement('a');
-    let portrait = document.createElement('img');
-  
-    // Change the textContent property of the h2 element to contain the biz's full name
-    businessName.textContent = biz.name;
-    address.textContent = biz.address;
-    phoneNum.textContent = biz.phone;
-    website.textContent = biz.website;
+// ------------------------------------------------------
+// Retrieve business data
+// ------------------------------------------------------
+async function getBusinesses() {
 
-    // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
-    portrait.setAttribute('src', biz.imageurl);
-    portrait.setAttribute('alt', 'Logo of ' + biz.name);
-    portrait.setAttribute('loading', 'lazy');
-  
-    // Add/append the section(card) with the businessName element
-    card.appendChild(portrait);
+    try {
+
+        const response = await fetch(businessURL);
+
+        if (!response.ok) {
+            throw new Error("Unable to load business data.");
+        }
+
+        const data = await response.json();
+
+        // Access companies array from JSON file
+        const businesses = data.companies;
+
+
+        // Create a card for each business
+        businesses.forEach(displayCard);
+
+
+    } catch (error) {
+
+        console.error("Business Directory Error:", error);
+
+    }
+
+}
+
+
+// ------------------------------------------------------
+// Create Business Card
+// ------------------------------------------------------
+function displayCard(business) {
+
+
+    // Create card elements
+    const card = document.createElement("section");
+    const businessName = document.createElement("p");
+    const address = document.createElement("p");
+    const phoneNumber = document.createElement("p");
+    const website = document.createElement("a");
+    const logo = document.createElement("img");
+
+
+    // Add business information
+    businessName.textContent = business.name;
+    address.textContent = business.address;
+    phoneNumber.textContent = business.phone;
+
+
+    // Create website link
+    website.href = business.website;
+    website.textContent = business.website;
+    website.target = "_blank";
+    website.rel = "noopener";
+
+
+    // Add image information
+    logo.src = business.imageurl;
+    logo.alt = `Logo of ${business.name}`;
+    logo.loading = "lazy";
+
+
+    // Add elements to the card
+    card.appendChild(logo);
     card.appendChild(businessName);
     card.appendChild(address);
-    card.appendChild(phoneNum);
+    card.appendChild(phoneNumber);
     card.appendChild(website);
-    
-  
-    // Add/append the existing HTML div with the cards class with the section(card)
-    document.querySelector('#cards').appendChild(card);
-  }
 
 
+    // Add card to directory container
+    document.querySelector("#cards").appendChild(card);
+
+}
+
+
+
+// ------------------------------------------------------
+// Grid View
+// ------------------------------------------------------
 function gridView() {
-  document.getElementById('grid').classList.add("open");
-  document.getElementById('cards').classList.remove("open");
+
+    const cards = document.querySelector("#cards");
+    const gridButton = document.querySelector("#grid");
+
+    if (cards && gridButton) {
+
+        cards.classList.remove("open");
+        gridButton.classList.add("open");
+
+    }
+
 }
 
+
+
+// ------------------------------------------------------
+// List View
+// ------------------------------------------------------
 function listView() {
-  document.getElementById('cards').classList.add("open");
-  document.getElementById('grid').classList.remove("open");
+
+    const cards = document.querySelector("#cards");
+    const listButton = document.querySelector("#list");
+
+    if (cards && listButton) {
+
+        cards.classList.add("open");
+        listButton.classList.add("open");
+
+    }
+
 }
 
-const lv = document.getElementById('list');
-lv.onclick = listView;
 
-const c = document.getElementById('grid');
-c.onclick = gridView;
+
+// ------------------------------------------------------
+// Add event listeners after page loads
+// ------------------------------------------------------
+function setupViewButtons() {
+
+    const listButton = document.querySelector("#list");
+    const gridButton = document.querySelector("#grid");
+
+
+    if (listButton && gridButton) {
+
+        listButton.addEventListener("click", listView);
+        gridButton.addEventListener("click", gridView);
+
+    }
+
+}
+
+
+
+// ------------------------------------------------------
+// Start Directory Script
+// ------------------------------------------------------
+getBusinesses();
+
+setupViewButtons();

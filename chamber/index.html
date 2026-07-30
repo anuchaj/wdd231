@@ -39,7 +39,6 @@
 
         <script src="scripts/windchill.js" defer></script>
         <script src="scripts/spotlight.js" defer></script>
-        <script src="scripts/business.js" defer></script>
         <script src="scripts/main.js" defer></script>
     </head>
 
@@ -106,26 +105,38 @@
                 <source srcset="images/heroimg600w.webp" media="(min-width: 600px) and (max-width: 799px)">
                 <source srcset="images/heroimg800w.webp" media="(min-width: 800px) and (max-width: 1099px)">
                 <source srcset="images/heroimg1100w.webp" media="(min-width: 1100px)">
-                <img class="heroImg" src="images/heroimg250w.webp" alt="Banner Hero Image">
+                <img class="heroImg" src="images/heroimg250w.webp" alt="Aerial view of Aba city representing the Aba Chamber of Commerce">
             </picture>                      
             <h1 class="welcome_txt">Welcome to Aba</h1>
             <div class="callToAction">
-                <a class="heroBtn" href="join.html">Join the chamber</a>
+                <a class="heroBtn" href="join.html">Join Us</a>
             </div>
         </div>
 
-        <!-- Events -->
+        <!-- ==================================================
+            Current Events Section
+        =================================================== -->
         <div class="events">
-            <h1>Ribbon Cutting</h1>
-            <h2>💎 The Diamond Shack</h2>
-            <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00 pm.</p>
+
+            <!-- Section heading -->
+            <h2>Ribbon Cutting</h2>
+
+            <!-- Event title -->
+            <h3>💎 The Diamond Shack</h3>
+
+            <p>
+                Join us for the grand opening of The Diamond Shack,
+                Thursday at 1:00 pm.
+            </p>
+
             <a href="#">More Info...</a>
+
         </div>
 
         <!-- Weather -->
         <div class="localWthr">
-            <h1 class="weather">Weather</h1>
-            <img src="iconsource" alt="description" id="weatherIcon">
+            <h2 class="weather">Current Weather</h2>
+            <img src="" alt="description" id="weatherIcon">
             <p class="degree"><span class="temp"></span>&#176;C</p>
             <p class="description"></p>
             <hr>
@@ -137,7 +148,7 @@
         
         <!-- News -->
         <div class="localNews">
-            <h1>News Release</h1>
+            <h2>News Release</h2>
             <p>The truth is, understanding online political satire isn’t easy. 
                 Many satirical websites mimic the tone and appearance of news sites. 
                 You have to be familiar with the political issue being satirized. 
@@ -150,13 +161,16 @@
         <!-- Spotlights -->
         <div class="spotlight"></div>
 
-        <!-- Join Us -->
-        <div class="joinUs">
-            <a class="join_btn" href="join.html">Join Us!</a>
-            <p class="joinText">Discover how to join the chamber of 
-                commerce and how it wil benfit your organization! 
-            </p>
+        <!-- Three-Day Forecast -->
+         <div class="forecast-section">
+            <h2>3-Day Forecast</h2>
+            <div class="forecast">
+
+            <!-- Forecast cards are generated dynamically by windchill.js -->
         </div>
+
+         </div>
+        
     </main>
     
     <!-- Footer starts here -->
