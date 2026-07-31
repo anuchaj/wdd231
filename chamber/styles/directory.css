@@ -50,21 +50,20 @@ main {
   text-align: center;
   text-decoration: none;
   font-size: 50px;
-  background-color: rgb(21, 28, 94);
-  color: #ccc;
+  background-color: #151c5e;
+  color: #EFF6FB;
   border-radius: 5px;
-  padding: 0.1em;
   margin: auto;
   padding: 10px;
 }
 
 #directoryBttn button:hover {
-  background-color: rgb(15, 21, 70);
+  background-color: #151c5e;
   color: white;
 }
 
 #directoryBttn button:focus, #directoryBttn button:active {
-  background-color: rgb(15, 21, 70);
+  background-color: #151c5e;
   color: white;
 }
 
@@ -79,38 +78,6 @@ main {
   display: none;
 }
 
-#grid span:nth-child(1) {
-  display: block;
-}
-
-#grid span:nth-child(2) {
-  display: none;
-}
-
-#grid.open span:nth-child(1) {
-  display: none;
-}
-
-#grid.open span:nth-child(2) {
-  display: block;
-}
-
-#list span:nth-child(1) {
-  display: block;
-}
-
-#list span:nth-child(2) {
-  display: none;
-}
-
-#list.open span:nth-child(1) {
-  display: none;
-}
-
-#list.open span:nth-child(2) {
-  display: block;
-}
-
 button.open {
   margin-bottom: 15px;
 }
@@ -122,8 +89,6 @@ button.open {
 
 #cards.open section {
   align-items: flex-start;
-  /*border: solid 1px #ccc;
-  margin: 0;*/
   width: 350px;
   height: 100px;
   padding: .75em 0;

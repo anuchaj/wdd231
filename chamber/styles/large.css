@@ -117,7 +117,7 @@
         font-size: 2rem;
     }
 
-    main .events h2, .spotlight .spots h2 {
+    main .events h2, .spotlight .spots h3 {
         font-size: 1rem;
     }
 
@@ -151,7 +151,7 @@
     }
 
 	/* Spots */
-    main .spotlight div.spots h2 {
+    main .spotlight div.spots h3 {
         font-size: 24px;
         margin: auto;
     }

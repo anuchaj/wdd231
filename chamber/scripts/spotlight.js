@@ -90,10 +90,16 @@ function createSpotlightCard(company) {
     phone.textContent = company.phone;
     membership.textContent = `${company.membership} Member`;
 
-    // Website link
-    website.href = company.website;
+    // Create a valid external website URL
+    let websiteURL = company.website;
+
+    if (!websiteURL.startsWith("http")) {
+        websiteURL = `https://${websiteURL}`;
+    }
+
+    website.href = websiteURL;
     website.target = "_blank";
-    website.rel = "noopener";
+    website.rel = "noopener noreferrer";
     website.textContent = company.website;
 
     // Company logo

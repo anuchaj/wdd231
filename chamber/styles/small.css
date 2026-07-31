@@ -222,13 +222,14 @@ main .events {
     justify-content: center;
 }
 
-.events h2, .events p {
+.events h2 {
     margin: .5rem auto;
-    color: var(--navy); 
+    color: var(--navy);
 }
 
-.events h2, .events p {
-    color:  #000; 
+.events p {
+    margin: .5rem auto;
+    color: #000;
 }
 
 .events a {
@@ -373,7 +374,7 @@ a {
     text-decoration: none;
 }
 
-main div.spots h2 {
+main div.spots h3 {
     color: var(--navy);
 }
 

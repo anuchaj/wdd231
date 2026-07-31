@@ -72,19 +72,23 @@ function displayCard(business) {
     address.textContent = business.address;
     phoneNumber.textContent = business.phone;
 
-
     // Create website link
-    website.href = business.website;
+    // Add https:// if the JSON data does not contain it
+    let websiteURL = business.website;
+
+    if (!websiteURL.startsWith("http")) {
+        websiteURL = `https://${websiteURL}`;
+    }
+
+    website.href = websiteURL;
     website.textContent = business.website;
     website.target = "_blank";
-    website.rel = "noopener";
-
+    website.rel = "noopener noreferrer";
 
     // Add image information
     logo.src = business.imageurl;
     logo.alt = `Logo of ${business.name}`;
     logo.loading = "lazy";
-
 
     // Add elements to the card
     card.appendChild(logo);
@@ -98,7 +102,6 @@ function displayCard(business) {
     document.querySelector("#cards").appendChild(card);
 
 }
-
 
 
 // ------------------------------------------------------
@@ -119,7 +122,6 @@ function gridView() {
 }
 
 
-
 // ------------------------------------------------------
 // List View
 // ------------------------------------------------------
@@ -136,7 +138,6 @@ function listView() {
     }
 
 }
-
 
 
 // ------------------------------------------------------
@@ -156,7 +157,6 @@ function setupViewButtons() {
     }
 
 }
-
 
 
 // ------------------------------------------------------
