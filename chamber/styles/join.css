@@ -1,7 +1,3 @@
-main.join {
-  margin-left: 20px;
-}
-
 .join h1 {
   margin: 0 auto;
   text-align: center;
@@ -101,7 +97,7 @@ aside {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px;
-    margin: 0 auto;
+    margin: 2rem;
   }
 
   .join h1 {

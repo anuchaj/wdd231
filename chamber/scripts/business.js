@@ -19,7 +19,6 @@
 const businessURL =
     "https://anuchaj.github.io/wdd231/chamber/data/members.json";
 
-
 // ------------------------------------------------------
 // Retrieve business data
 // ------------------------------------------------------
