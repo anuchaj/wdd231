@@ -1,191 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta Files -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="WDD 231 | Aba Chamber of Commerce website | Join page of the Aba Chamber of Commerce Site">
-        <meta name="author" content="Joseph Anucha">
+  <head>
+    <!-- Meta Files -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 | Aba Chamber of Commerce website | Join page of the Aba Chamber of Commerce Site">
+    <meta name="author" content="Joseph Anucha">
 
-        <meta property="og:title" content="Aba Chamber of Commerce">
-        <meta property="og:description" content="A resourceful hub for businesses in the city of Aba.">
-        <meta property="og:url" content="https://anuchaj.github.io/wdd231/chamber/join.html">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:image" content="https://anuchaj.github.io/wdd231/chamber/images/logo-01.webp">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Aba Chamber of Commerce | Join">
-    
-        <!-- Site Icon -->
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/small.css">
-        <link rel="stylesheet" href="styles/medium.css">
-        <link rel="stylesheet" href="styles/large.css">
-        <link rel="stylesheet" href="styles/join.css">
-    
-        <!-- Pre load other related pages -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        
-        <!-- Title -->
-        <title>Aba Chamber of Commerce | Join </title>
+    <meta property="og:title" content="Aba Chamber of Commerce">
+    <meta property="og:description" content="A resourceful hub for businesses in the city of Aba.">
+    <meta property="og:url" content="https://anuchaj.github.io/wdd231/chamber/join.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://anuchaj.github.io/wdd231/chamber/images/logo-01.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aba Chamber of Commerce | Join">
 
-        <!-- Scripts-->
-        <script src="scripts/main.js" defer></script>
-    </head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <body>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/join.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Aba Chamber of Commerce | Join</title>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
     <!-- Header contents -->
-        <header>
-            <div class="banner">
-                <p id="banner_msg"></p>
+    <header>
+      <div class="banner">
+        <p id="banner_msg"></p>
+      </div>
+
+      <div class="menu_bar">
+        <div class="menu_btn">
+          <button id="hamburgerBtn"><span>☰</span><span>X</span></button>
+        </div>
+
+        <a href="index.html" id="hd-logo">
+          <picture>
+            <source srcset="images/logo-1.png" media="(min-width: 400px)">
+            <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo">
+          </picture>
+        </a>
+
+        <div class="compName">
+          <p id="compName_line1"><b>ABA</b></p>
+          <p id="compName_line2">Chamber of Commerce</p>
+        </div>
+
+        <nav class="bar_wide">
+          <ul id="primaryLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="social_icons">
+          <a href="https://www.facebook.com/"><img src="images/fb-icon.png" alt="Facebook Icon"></a>
+          <a href="https://www.linkedin.com/"><img src="images/in-icon.png" alt="LinkedIn Icon"></a>
+        </div>
+      </div>
+
+      <nav class="nav_bar">
+        <ul id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li class="active"><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="date"></div>
+    </header>
+
+    <main class="join">
+      <h1>Join the Chamber of Commerce</h1>
+
+      <form method="get" action="thankyou.html">
+        <div class="form">
+          <div class="form-section">
+            <fieldset class="pi">
+              <legend>Personal Information</legend>
+
+              <label class="info">First Name*
+                <input type="text" id="fname" name="fname" title="Enter your first name" autocomplete="given-name" required>
+              </label>
+
+              <label class="info">Last Name*
+                <input type="text" id="lname" name="lname" title="Enter your last name" autocomplete="family-name" required>
+              </label>
+
+              <label class="info">Organization Title
+                <input type="text" id="orgtitle" name="orgtitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z -]{7,}" placeholder="Operations Manager">
+              </label>
+
+              <label class="info">Email Address*
+                <input type="email" id="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="someone@example.com" required>
+              </label>
+
+              <label class="info">Mobile Phone*
+                <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="+234 801 234 5678" required>
+              </label>
+            </fieldset>
+
+            <fieldset class="bi">
+              <legend>Business Information</legend>
+
+              <label class="info">Business Name*
+                <input type="text" id="bname" name="bname" title="Enter your business or organization name" autocomplete="organization" required>
+              </label>
+
+              <label class="info">Business Description
+                <textarea id="description" name="description" title="Describe your business" placeholder="Brief description of your business or organization"></textarea>
+              </label>
+
+              <input type="hidden" name="timestamp" id="timestamp">
+            </fieldset>
+
+            <fieldset class="ml">
+              <legend>Membership Level</legend>
+
+              <label class="level"><input type="radio" name="level" value="np" required> NP Membership</label>
+              <label class="level"><input type="radio" name="level" value="bronze"> Bronze Membership</label>
+              <label class="level"><input type="radio" name="level" value="silver"> Silver Membership</label>
+              <label class="level"><input type="radio" name="level" value="gold"> Gold Membership</label>
+            </fieldset>
+
+            <label class="submit">
+              <input type="submit" value="Join Now" class="submitBtn">
+            </label>
+          </div>
+
+          <aside class="membership-cards">
+            <h2>Membership Benefits</h2>
+
+            <div class="membership-card np-card">
+              <h3>🏅 NP Membership</h3>
+              <p>Perfect for nonprofit organizations.</p>
+              <button type="button" data-modal="#np-modal">View Benefits</button>
             </div>
 
-            <div class="menu_bar">
-                <div class="menu_btn">
-                    <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-                </div>
-                
-                <a href="index.html" id="hd-logo">
-                    <picture>
-                        <source srcset="images/logo-1.png" media="(min-width: 400px)">
-                        <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo">
-                    </picture>
-                </a>
-                
-                <div class="compName">
-                    <p id="compName_line1"><b>ABA</b></p>
-                    <p id="compName_line2"> Chamber of Commerce </p>
-                </div>
-
-                <nav class="bar_wide">
-                    <ul id="primaryLinks">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                        <li><a href="directory.html">Directory</a></li>
-                        <li class="active"><a href="join.html">Join</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="social_icons">
-                    <a href="https://www.facebook.com/"><img src="images/fb-icon.png" alt="Facebook Icon"></a>
-                    <a href="https://www.linkedin.com/"><img src="images/in-icon.png" alt="Linked Icon"></a>
-                </div>
+            <div class="membership-card bronze-card">
+              <h3>🥉 Bronze Membership</h3>
+              <p>Essential benefits for growing businesses.</p>
+              <button type="button" data-modal="#bronze-modal">View Benefits</button>
             </div>
 
-            <nav class="nav_bar">
-                <ul id="primaryNav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li class="active"><a href="join.html">Join</a></li>
-                    <li><a href="contact.html">Contact</a></li>  
-                </ul>
-            </nav>
+            <div class="membership-card silver-card">
+              <h3>🥈 Silver Membership</h3>
+              <p>Greater visibility and networking opportunities.</p>
+              <button type="button" data-modal="#silver-modal">View Benefits</button>
+            </div>
 
-            <div class="date"></div>
-        </header>
+            <div class="membership-card gold-card">
+              <h3>🥇 Gold Membership</h3>
+              <p>Maximum exposure and premium chamber benefits.</p>
+              <button type="button" data-modal="#gold-modal">View Benefits</button>
+            </div>
+          </aside>
+        </div>
+      </form>
 
-        <main class="join">
-            <h1>Join the Chamber of Commerce</h1>
-            <form method="get" action="thankyou.html">
-                <div class="form">
-                    <fieldset class="pi">
-                        <legend>Personal Information</legend>
-                        <label class="info">First Name* <input type="text" name="fname" required></label>
-                        <label class="info">Last Name* <input type="text" name="lname" required></label>
-                        <label class="info">Title <input type="text" name="title" pattern="([\p{L}\s-]){7,}" placeholder="Position" ></label>
-                        <label class="info">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                        <label class="info">Phone* <input type="tel" name="phone" placeholder="(000) 000-0000" required></label>
-                    </fieldset>
-                    <fieldset class="bi">
-                        <legend>Business Information</legend>
-                        <label class="info">Business Name* <input type="text" name="bName" required></label>
-                        <label class="info">Business Description<textarea name="description" placeholder="Brief description of business"></textarea></label>   
-                        <input type="hidden" name="datetime" id="todayDate">
-                    </fieldset>
-                    <fieldset class="ml">
-                        <legend>Membership Level</legend>
-                        <label class="level"><input type="radio" name="level" value="NP" required> NP Membership</label>
-                        <label class="level"><input type="radio" name="level" value="bronze"> Bronze Membership</label>
-                        <label class="level"><input type="radio" name="level" value="silver"> Silver Membership</label>
-                        <label class="level"><input type="radio" name="level" value="gold"> Gold Membership</label>
-                    </fieldset>
-                    <aside>
-                        <div class="benefits">
-                            <h2>Membership Benefits</h2>
-                            <h3>🏅 NP Membership</h3>
-                            <ul>
-                                <li>No fee</li>
-                                <li>Business listing in our directory</li>
-                                <li>Email to receive notifications all about chamber</li>
-                            </ul>
-                            <h3>🥉 Bronze Membership</h3>
-                            <ul>
-                                <li>Annual cost: $50</li>
-                                <li>Business listing in our directory</li>
-                                <li>Add credibility to your business</li>
-                                <li>Company spotlight on our website</li>
-                                <li>Email to receive notifications all about chamber</li>
-                            </ul>
-                            <h3>🥈 Silver Membership</h3>
-                            <ul>
-                                <li>Annual Cost: $100</li>
-                                <li>Business listing in our directory</li>
-                                <li>Add credibility to your business</li>
-                                <li>Company spotlight on our website</li>
-                                <li>Build awareness of your business through cost-effective advertising</li>
-                            </ul>
-                            <h3>🥇 Gold Membership</h3>
-                                <ul>
-                                    <li>Annual Cost: $200</li>
-                                    <li>Business listing in our directory</li>
-                                    <li>Add credibility to your business</li>
-                                    <li>Company spotlight on our website</li>
-                                    <li>Build awareness of your business through cost-effective advertising</li>
-                                    <li>Access to resources, discounts, and relationships</li>
-                                    <li>Attend educational and training workshops</li>
-                                </ul>
-                        </div>
-                    </aside>
-                </div>
-                <label class="submit"><input type="submit" value="Join Now"  class="submitBtn"></label>
-            </form>
-        
-        </main>
+      <dialog id="np-modal">
+        <h3>🏅 NP Membership</h3>
+        <div>
+            <ul>
+                <li>No membership fee</li>
+                <li>Business listing in the chamber directory</li>
+                <li>Chamber news and event notifications</li>
+                <li>Access to networking events</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+      </dialog>
 
-        <!-- Footer starts here -->
-        <footer>
-            <a href="index.html">
-                <picture>
-                    <source srcset="images/logo-1.png" media="(min-width: 400px)">
-                    <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo" class="logo">
-                </picture> 
-            </a>
-            <section>
-                <h2 class="footerTitle">Aba Chamber of Commerce</h2>
-                <p>P.O. Box 450102, Aba, Nigeria</p>
-                <p><a class="openWeather" href="https://openweathermap.org/">Weather Info from OpenWeather.org</a>
-                </p> 
-            </section>
-            <section>
-                <p>info@abachambers.com</p>
-                <p>+234 (806) 432 7684</p>
-                <p><a class="map" href="https://tinyurl.com/abainthemap">📍 Location Map</a></p>
-            </section>
-            <section class="very-bottom">
-                <p>&#169;2026 Aba Chamber </p>
-                <p>Joseph Anucha </p>
-                <p>WDD 231 Chamber Project </p>
-                <p id="timemod"></p>
-            </section>
-        </footer>
-    </body>
-  
+      <dialog id="bronze-modal">
+        <h3>🥉 Bronze Membership</h3>
+        <div>
+            <ul>
+                <li>Annual fee: $50</li>
+                <li>Directory listing</li>
+                <li>Business credibility enhancement</li>
+                <li>Website spotlight opportunities</li>
+                <li>Event announcements and updates</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+      </dialog>
+
+      <dialog id="silver-modal">
+        <h3>🥈 Silver Membership</h3>
+        <div>
+            <ul>
+                <li>Annual fee: $100</li>
+                <li>Everything in Bronze</li>
+                <li>Discounted event registration</li>
+                <li>Advertising opportunities</li>
+                <li>Business training workshops</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+      </dialog>
+
+      <dialog id="gold-modal">
+        <h3>🥇 Gold Membership</h3>
+        <div>
+            <ul>
+                <li>Annual fee: $200</li>
+                <li>Everything in Silver</li>
+                <li>Premium homepage spotlight</li>
+                <li>Exclusive leadership events</li>
+                <li>Priority advertising placement</li>
+                <li>Advanced business development resources</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </div>
+      </dialog>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer>
+      <a href="index.html">
+        <picture>
+          <source srcset="images/logo-1.png" media="(min-width: 400px)">
+          <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo" class="logo">
+        </picture>
+      </a>
+
+      <section>
+        <h2 class="footerTitle">Aba Chamber of Commerce</h2>
+        <p>P.O. Box 450102, Aba, Nigeria</p>
+        <p><a class="openWeather" href="https://openweathermap.org/">Weather Info from OpenWeather.org</a></p>
+      </section>
+
+      <section>
+        <p>info@abachambers.com</p>
+        <p>+234 (806) 432 7684</p>
+        <p><a class="map" href="https://tinyurl.com/abainthemap">📍 Location Map</a></p>
+      </section>
+
+      <section class="very-bottom">
+        <p>©2026 Aba Chamber</p>
+        <p>Joseph Anucha</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="timemod"></p>
+      </section>
+    </footer>
+  </body>
 </html>

@@ -59,7 +59,7 @@
 
   
     /* main section with grid*/
-    main {
+    main.content {
         display: grid;
         grid-template-columns: 60% 1fr;
         margin-bottom: 1rem;
