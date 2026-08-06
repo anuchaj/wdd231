@@ -1,0 +1,333 @@
+/* ==========================================================
+   Express Hands Website Plan
+   WDD 231 - Site Plan Stylesheet
+   Author: Joseph Anucha
+========================================================== */
+
+/* ---------- CSS Reset ---------- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Root Variables ---------- */
+
+:root {
+    --primary: #0F4C81;
+    --secondary: #1FA971;
+    --accent: #F4B400;
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+    --text: #2D3748;
+    --border: #D8DEE8;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+
+    --max-width: 1100px;
+}
+
+/* ---------- Base ---------- */
+
+body {
+    font-family: var(--body-font);
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.3rem;
+    margin-bottom: .5rem;
+}
+
+header p {
+    font-size: 1.05rem;
+    opacity: .95;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    padding: 2rem 0 3rem;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: var(--surface);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    margin: 1rem 0 .5rem;
+}
+
+.card p,
+.card li {
+    font-size: 1rem;
+}
+
+.card p:not(:last-child),
+.card ul:not(:last-child),
+.card ol:not(:last-child),
+.card table:not(:last-child) {
+    margin-bottom: 1.2rem;
+}
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: .75rem;
+}
+
+/* ---------- Color Scheme ---------- */
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.color-box {
+    border-radius: 10px;
+    padding: 1.25rem;
+    color: #fff;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-box h3 {
+    color: inherit;
+    margin-bottom: .5rem;
+}
+
+.primary {
+    background: var(--primary);
+}
+
+.secondary {
+    background: var(--secondary);
+}
+
+.accent {
+    background: var(--accent);
+    color: #222;
+}
+
+.neutral {
+    background: #E8EEF5;
+    color: #222;
+    border: 1px solid #cfd7e2;
+}
+
+/* ---------- Typography ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+thead {
+    background: var(--primary);
+    color: #fff;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: .85rem;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+.font-samples {
+    background: #f5f8fc;
+    border-left: 6px solid var(--secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.heading-sample {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+.body-sample {
+    font-family: var(--body-font);
+    margin-top: .8rem;
+}
+
+/* ---------- Wireframe ---------- */
+
+.wireframe {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.wireframe img {
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.wireframe figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: .95rem;
+}
+
+/* ---------- Links ---------- */
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.45rem;
+    }
+
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid var(--border);
+        padding: .85rem 1rem;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    body {
+        font-size: .96rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .colors {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-sample {
+        font-size: 1.5rem;
+    }
+}
