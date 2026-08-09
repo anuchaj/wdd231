@@ -257,3 +257,53 @@
         font-size: 18px;
     }
 }
+
+
+/* Discover Page - Large Layout */
+@media only screen and (min-width: 1025px) {
+    main.discover {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 1.5rem;
+    }
+
+    .discover-card {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "title title"
+            "figure description"
+            "figure address"
+            "button button";
+        column-gap: 1rem;
+        row-gap: .6rem;
+        align-items: center;
+    }
+
+    .discover-card h2 {
+        font-size: 1.35rem;
+    }
+
+    .discover-card img {
+        width: 220px;
+        height: 147px;
+        margin: 0;
+    }
+
+    .discover-card .learn-more {
+        margin-top: .5rem;
+    }
+
+    .discover-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(.9) saturate(1.1);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, .25);
+    }
+}

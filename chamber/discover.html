@@ -1,190 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 | Aba Chamber of Commerce | Discover page of the Aba Chamber of Commerce website">
+    <meta name="description" content="Discover places, attractions, businesses, and community features in Aba, Nigeria.">
     <meta name="author" content="Joseph Anucha">
-
-    <meta property="og:title" content="Aba Chamber of Commerce">
-    <meta property="og:description" content="A resourceful hub for businesses in the city of Aba.">
+    <meta property="og:title" content="Aba Chamber of Commerce | Discover">
+    <meta property="og:description" content="Discover places, attractions, businesses, and community features in Aba, Nigeria.">
     <meta property="og:url" content="https://anuchaj.github.io/wdd231/chamber/discover.html">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://anuchaj.github.io/wdd231/chamber/images/logo-01.webp">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Aba Chamber of Commerce | Discover">
+    <meta property="og:site_name" content="Aba Chamber of Commerce">
 
-    <!-- Site Icon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <link rel="stylesheet" href="styles/lazyload.css">
 
-    <title>Aba Chamber of Commerce | Discover </title>
-
-    <!-- Scripts -->
+    <title>Aba Chamber of Commerce | Discover</title>
+    
     <script src="scripts/lazyload.js" defer></script>
     <script src="scripts/visits.js" defer></script>
-	<script src="scripts/main.js" defer></script>
-  </head>
-
-  <body>
-
-    <!-- Header contents -->
-    <header>
-        <div class="banner">
-            <p id="banner_msg"></p>
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
+</head>
+<body>
+<header>
+    <div class="banner">
+        <p id="banner_msg"></p>
+    </div>
+    <div class="menu_bar">
+        <div class="menu_btn">
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
         </div>
-
-        <div class="menu_bar">
-            <div class="menu_btn">
-                <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-            </div>
-            
-            <a href="index.html" id="hd-logo">
-                <picture>
-                    <source srcset="images/logo-1.png" media="(min-width: 400px)">
-                    <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo">
-                </picture>
-            </a>
-            
-            <div class="compName">
-                <p id="compName_line1"><b>ABA</b></p>
-                <p id="compName_line2"> Chamber of Commerce </p>
-            </div>
-
-            <nav class="bar_wide">
-                <ul id="primaryLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    
-            <section class="social_icons">
-                <a href="https://www.facebook.com/"><img src="images/fb-icon.png" alt="social icon fb"></a>
-                <a href="https://www.linkedin.com/"><img src="images/in-icon.png" alt="social icon linkedin"></a>
-            </section>
+        <a href="index.html" id="hd-logo">
+            <picture>
+                <source srcset="images/logo-1.png" media="(min-width: 400px)">
+                <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo">
+            </picture>
+        </a>
+        <div class="compName">
+            <p id="compName_line1"><b>ABA</b></p>
+            <p id="compName_line2">Chamber of Commerce</p>
         </div>
-
-        <nav class="nav_bar">
-            <ul id="primaryNav">
+        <nav class="bar_wide">
+            <ul id="primaryLinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="contact.html">Contact</a></li>  
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
-        <div class="date"></div>
-    </header>
-
-    <!-- Main contents starts here -->
-    <main class="discover">
-        <h1 class="discoverTitle">Meet Aba</h1>
-    
-        <div class="sunset">
-          <img src="images/500x300.png" data-src="images/sunset.jpg" alt="Sunset">
-          <div class="container">
-          <p>Sunset at Aba is one of the most beautiful things you will see here.</p>
-          </div>
-        </div>
-    
-        <div class="church">
-          <img src="images/500x300.png" data-src="images/church.jpg" alt="Church LDS">
-          <div class="container">
-          <p>You can find many places to show your devotion to God.</p>
-          </div>
-        </div>
-    
-        <div class="restaurants">
-          <img src="images/500x300.png" data-src="images/restaurants.jpg" alt="Restaurants">
-          <div class="container">
-          <p>We know, you know, everyone knows that places to eat is very important, and Aba knows that, so you are able to enjoy different meals in very amazing spots over the whole town.</p>
-          </div>
-        </div>
-    
-        <div class="food">
-          <img src="images/500x300.png" data-src="images/food.jpg" alt="Food">
-          <div class="container">
-          <p>The place is not the only important thing to eat, the food too, and it's good as the places you can eat.</p>
-          </div>
-        </div>
-    
-        <div class="offices">
-          <img src="images/500x300.png" data-src="images/ofices.jpg" alt="Offices">
-          <div class="container">
-          <p>Aba is known as a growing town, offices are growing too in the zone, the best of all, you have an amazing landscape with a look to the Daule's River.</p>
-          </div>
-        </div>
-    
-        <div class="cc">
-          <img src="images/500x300.png" data-src="images/eldorado.jpg" alt="Mall">
-          <div class="container">
-          <p>Malls are really necessary in our days, and this one specially because it will be one of the biggest one in Aba</p>
-          </div>
-        </div>
-    
-        <div class="plaza">
-          <img src="images/500x300.png" data-src="images/plaza.jpg" alt="Plaza">
-          <div class="container">
-          <p>If you are low of time, plaza are a better options than malls searching for parking lots and that kind of things. Plaza makes your life easier!</p>
-          </div>
-        </div>
-    
-        <div class="night">
-          <img src="images/300x500.png" data-src="images/night.jpg" alt="Night">
-          <div class="container">
-          <p>To be honest, night activity you will only find on weekends, on weekdays you won't, but still look awesome during the night.</p>
-          </div>
-        </div>
-    
-        <div class="theater">
-          <img src="images/300x500.png" data-src="images/theater.jpg" alt="Theater">
-          <div class="container">
-          <p>Cutural things can't be missed here, performances are scheduled during the whole year.</p>
-          </div>
-        </div>
-    
-        <p id="lastvisit" class="visitlast"></p>
-    </main>
-
-    <!-- Footer starts here -->
-    <footer>
-        <a href="index.html">
-            <picture>
-                <source srcset="images/logo-1.png" media="(min-width: 400px)">
-                <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo" class="logo">
-            </picture> 
-        </a>
-        <section>
-            <h2 class="footerTitle">Aba Chamber of Commerce</h2>
-            <p>P.O. Box 450102, Aba, Nigeria</p>
-            <p><a class="openWeather" href="https://openweathermap.org/">Weather Info from OpenWeather.org</a>
-            </p> 
+        <section class="social_icons">
+            <a href="https://www.facebook.com/"><img src="images/fb-icon.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/"><img src="images/in-icon.png" alt="LinkedIn"></a>
         </section>
-        <section>
-            <p>info@abachambers.com</p>
-            <p>+234 (806) 432 7684</p>
-            <p><a class="map" href="https://tinyurl.com/abainthemap">📍 Location Map</a></p>
-        </section>
-        <section class="very-bottom">
-            <p>&#169;2026 Aba Chamber </p>
-            <p>Joseph Anucha </p>
-            <p>WDD 231 Chamber Project </p>
-            <p id="timemod"></p>
-        </section>
-    </footer>
-  </body>
+    </div>
+    <nav class="nav_bar">
+        <ul id="primaryNav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="date"></div>
+</header>
+<main class="discover">
+    <h1 class="discoverTitle">Discover Aba</h1>
+    <p id="lastvisit" class="visitlast" aria-live="polite"></p>
+    <section id="discoverGrid" class="discover-grid" aria-label="Places and features to discover in Aba"></section>
+</main>
+<footer>
+    <a href="index.html">
+        <picture>
+            <source srcset="images/logo-1.png" media="(min-width: 400px)">
+            <img src="images/logo-01.webp" alt="Aba Chamber of Commerce Logo" class="logo">
+        </picture>
+    </a>
+    <section>
+        <h2 class="footerTitle">Aba Chamber of Commerce</h2>
+        <p>P.O. Box 450102, Aba, Nigeria</p>
+        <p><a class="openWeather" href="https://openweathermap.org/">Weather Info from OpenWeather.org</a></p>
+    </section>
+    <section>
+        <p>info@abachambers.com</p>
+        <p>+234 (806) 432 7684</p>
+        <p><a class="map" href="https://tinyurl.com/abainthemap">📍 Location Map</a></p>
+    </section>
+    <section class="very-bottom">
+        <p>&#169;2026 Aba Chamber</p>
+        <p>Joseph Anucha</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="timemod"></p>
+    </section>
+</footer>
+</body>
 </html>

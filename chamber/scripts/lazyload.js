@@ -1,38 +1,46 @@
 // Joseph Anucha
 // Progressive Loading
-// Using Intersect Observer
+// Using Intersection Observer
 
-// Get all images with data-src attribute.
-let imagesToLoad = document.querySelectorAll("img[data-src]");
-
-// Optional parameters being set for Intersect Observer
 const imgOptions = {
-    threshold: 1, //determines the speed at which intersection is done; 0 is faster.
+    threshold: 0,
     rootMargin: "0px 0px 100px 0px"
 };
-// function to move the path from data-src to src
+
 const loadImages = (image) => {
-  image.setAttribute("src", image.getAttribute("data-src"));
-  image.onload = () => {image.removeAttribute("data-src");};
+    const imageSource = image.getAttribute("data-src");
+
+    if (!imageSource) return;
+
+    image.setAttribute("src", imageSource);
+
+    image.addEventListener("load", () => {
+        image.removeAttribute("data-src");
+    }, { once: true });
 };
 
-// Check to see if Intersect Oberser is supported
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((items, observer) => {
-    items.forEach((item) => {
-      if (item.isIntersecting) {
-        loadImages(item.target);
-        observer.unobserve(item.target);
-      }
-    });
-  }, imgOptions); 
-  // Loop through each img and check status and load if necessary
-  imagesToLoad.forEach((img) => {
-    observer.observe(img);
-  });
-} else { // Just load all images if not supported
-  imagesToLoad.forEach((img) => {
-    loadImages(img);
-  });
-}
+const initLazyLoading = () => {
+    const imagesToLoad = document.querySelectorAll("img[data-src]");
 
+    if (!("IntersectionObserver" in window)) {
+        imagesToLoad.forEach(loadImages);
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                loadImages(entry.target);
+                observerInstance.unobserve(entry.target);
+            }
+        });
+    }, imgOptions);
+
+    imagesToLoad.forEach((image) => {
+        observer.observe(image);
+    });
+};
+
+window.initLazyLoading = initLazyLoading;
+
+initLazyLoading();

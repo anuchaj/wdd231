@@ -204,4 +204,69 @@
     .very-bottom p:nth-child(3):before, .very-bottom p:nth-child(2):before{content:'|'}
     .very-bottom p:nth-child(3):after{content:'|'}
     
+}
+
+
+/* Discover Page - Medium Layout */
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    main.discover {
+        padding: 2rem;
     }
+
+    .discover-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+        gap: 1rem;
+    }
+
+    .discover-card {
+        grid-template-columns: 240px 1fr;
+        grid-template-areas:
+            "title title"
+            "figure description"
+            "figure address"
+            "button button";
+        column-gap: 1rem;
+        row-gap: .5rem;
+        align-items: center;
+    }
+
+    .discover-card h2 {
+        font-size: 1.35rem;
+    }
+
+    .discover-card figure {
+        align-self: start;
+    }
+
+    .discover-card img {
+        width: 240px;
+        height: 160px;
+        margin: 0;
+    }
+
+    .discover-card p {
+        align-self: start;
+    }
+
+    .discover-card address {
+        align-self: end;
+    }
+
+    .discover-card .learn-more {
+        margin-top: .5rem;
+    }
+
+    .discover-card img:hover {
+        transform: scale(1.03);
+        filter: brightness(.9);
+    }
+}
