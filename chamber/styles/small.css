@@ -306,7 +306,9 @@ main div.events h2, div.localNews h2 {
 .localWthr #weatherIcon {
     grid-column: 1 / 2;
     grid-row: 2 / 2;
-    max-width: 85%;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
     justify-self: center;
     margin: 0;
 }

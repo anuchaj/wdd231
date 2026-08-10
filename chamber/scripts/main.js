@@ -33,9 +33,6 @@ const date =  new Date().getFullYear();
 let lastMod = new Date(document.lastModified);
 var removeTZ = lastMod.toLocaleString();
 
-const newParagraph = document.createElement("p");
-newParagraph.innerText =`Last Modification: ${removeTZ}`;
-
-document.querySelector('#timemod').appendChild(newParagraph);
-
+const dateModified = document.querySelector("#timemod");
+dateModified.innerText = `Last Modification: ${removeTZ}`;
 
