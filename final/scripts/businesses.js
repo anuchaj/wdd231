@@ -5,10 +5,7 @@
 
 import { getBusinesses } from "./modules/data.js";
 
-/* ==========================================================
-   ELEMENTS
-========================================================== */
-
+//ELEMENTS
 const businessGrid = document.querySelector("#business-grid");
 const loadingMessage = document.querySelector("#loading-message");
 const errorMessage = document.querySelector("#error-message");
@@ -21,16 +18,10 @@ const ratingFilter = document.querySelector("#rating-filter");
 const sortFilter = document.querySelector("#sort-filter");
 const resetButton = document.querySelector("#reset-filters");
 
-/* ==========================================================
-   APPLICATION STATE
-========================================================== */
-
+//APPLICATION STATE
 let allBusinesses = [];
 
-/* ==========================================================
-   INITIALIZE
-========================================================== */
-
+//INITIALIZE
 async function initializeDirectory() {
     try {
         showLoading();
@@ -47,10 +38,7 @@ async function initializeDirectory() {
     }
 }
 
-/* ==========================================================
-   LOADING STATE
-========================================================== */
-
+//LOADING STATE
 function showLoading() {
     loadingMessage.hidden = false;
     errorMessage.hidden = true;
@@ -62,10 +50,7 @@ function hideLoading() {
     loadingMessage.hidden = true;
 }
 
-/* ==========================================================
-   ERROR STATE
-========================================================== */
-
+//ERROR STATE
 function showError() {
     loadingMessage.hidden = true;
     errorMessage.hidden = false;
@@ -74,10 +59,7 @@ function showError() {
     resultsCount.textContent = "0";
 }
 
-/* ==========================================================
-   POPULATE FILTERS
-========================================================== */
-
+//POPULATE FILTERS
 function populateFilters(businesses) {
     const categories = [...new Set(businesses.map((business) => business.category))].sort();
     const locations = [...new Set(businesses.map((business) => business.location))].sort();
@@ -101,10 +83,7 @@ function populateFilters(businesses) {
     });
 }
 
-/* ==========================================================
-   URL PARAMETERS
-========================================================== */
-
+//URL PARAMETERS
 function applyURLParameters() {
     const params = new URLSearchParams(window.location.search);
     const search = params.get("search");
@@ -136,10 +115,7 @@ function applyURLParameters() {
     }
 }
 
-/* ==========================================================
-   FILTER BUSINESSES
-========================================================== */
-
+//FILTER BUSINESSES
 function getFilteredBusinesses() {
     const searchTerm = searchInput.value.trim().toLowerCase();
     const category = categoryFilter.value;
@@ -164,10 +140,7 @@ function getFilteredBusinesses() {
     });
 }
 
-/* ==========================================================
-   SORT BUSINESSES
-========================================================== */
-
+//SORT BUSINESSES
 function sortBusinesses(businesses) {
     const sortOption = sortFilter.value;
     const sorted = [...businesses];
@@ -183,10 +156,7 @@ function sortBusinesses(businesses) {
     return sorted;
 }
 
-/* ==========================================================
-   RENDER BUSINESSES
-========================================================== */
-
+//RENDER BUSINESSES
 function renderBusinesses(businesses) {
     const filtered = sortBusinesses(businesses);
 
@@ -206,10 +176,7 @@ function renderBusinesses(businesses) {
     });
 }
 
-/* ==========================================================
-   CREATE BUSINESS CARD
-========================================================== */
-
+//CREATE BUSINESS CARD
 function createBusinessCard(business) {
     const article = document.createElement("article");
     article.className = "business-card";
@@ -317,39 +284,27 @@ function createBusinessCard(business) {
     return article;
 }
 
-/* ==========================================================
-   STAR DISPLAY
-========================================================== */
-
+//STAR DISPLAY
 function getStars(rating) {
     const roundedRating = Math.round(rating);
 
     return "★".repeat(roundedRating) + "☆".repeat(5 - roundedRating);
 }
 
-/* ==========================================================
-   FILTER EVENT LISTENERS
-========================================================== */
-
+//FILTER EVENT LISTENERS
 searchInput.addEventListener("input", updateDirectory);
 categoryFilter.addEventListener("change", updateDirectory);
 locationFilter.addEventListener("change", updateDirectory);
 ratingFilter.addEventListener("change", updateDirectory);
 sortFilter.addEventListener("change", updateDirectory);
 
-/* ==========================================================
-   UPDATE DIRECTORY
-========================================================== */
-
+//UPDATE DIRECTORY
 function updateDirectory() {
     const filtered = getFilteredBusinesses();
     renderBusinesses(filtered);
 }
 
-/* ==========================================================
-   RESET FILTERS
-========================================================== */
-
+//RESET FILTERS
 resetButton.addEventListener("click", () => {
     searchInput.value = "";
     categoryFilter.value = "all";
@@ -360,8 +315,5 @@ resetButton.addEventListener("click", () => {
     updateDirectory();
 });
 
-/* ==========================================================
-   START APPLICATION
-========================================================== */
-
+//START APPLICATION
 initializeDirectory();

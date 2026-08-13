@@ -110,3 +110,106 @@ if (notificationButton) {
         alert("Notifications will be available in a future version of Express Hands.");
     });
 }
+
+/* ==========================================================
+   PHASE 4
+   CONTACT FORM
+========================================================== */
+
+const contactForm = document.querySelector("#contact-form");
+const contactSuccess = document.querySelector("#contact-success");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(contactForm);
+
+        const contactSubmission = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+            submittedAt: new Date().toISOString()
+        };
+
+        /*
+           Store the submission locally.
+
+           This is only a frontend demonstration.
+           No real email is being sent.
+        */
+
+        const existingMessages = JSON.parse(
+            localStorage.getItem("expressHandsContactMessages")
+        ) || [];
+
+        existingMessages.push(contactSubmission);
+
+        localStorage.setItem(
+            "expressHandsContactMessages",
+            JSON.stringify(existingMessages)
+        );
+
+        contactForm.reset();
+        contactSuccess.hidden = false;
+
+        setTimeout(() => {
+            contactSuccess.hidden = true;
+        }, 5000);
+    });
+}
+
+
+/* ==========================================================
+   LIST YOUR BUSINESS FORM
+========================================================== */
+
+const businessForm = document.querySelector("#business-form");
+const businessSuccess = document.querySelector("#business-success");
+
+if (businessForm) {
+    businessForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!businessForm.checkValidity()) {
+            businessForm.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(businessForm);
+
+        const businessSubmission = {
+            owner: formData.get("owner"),
+            email: formData.get("email"),
+            businessName: formData.get("businessName"),
+            category: formData.get("category"),
+            location: formData.get("location"),
+            description: formData.get("description"),
+            submittedAt: new Date().toISOString()
+        };
+
+        const existingListings = JSON.parse(
+            localStorage.getItem("expressHandsBusinessSubmissions")
+        ) || [];
+
+        existingListings.push(businessSubmission);
+
+        localStorage.setItem(
+            "expressHandsBusinessSubmissions",
+            JSON.stringify(existingListings)
+        );
+
+        businessForm.reset();
+        businessSuccess.hidden = false;
+
+        setTimeout(() => {
+            businessSuccess.hidden = true;
+        }, 5000);
+    });
+}

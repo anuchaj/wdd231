@@ -1,0 +1,257 @@
+/* ==========================================================
+   EXPRESS HANDS
+   WDD 231 Individual Website Project
+   LARGE SCREEN STYLES
+   Desktop / large screens: 901px+
+========================================================== */
+
+/* ==========================================================
+   GLOBAL CONTAINERS
+========================================================== */
+
+.section-container,
+.header-container,
+.footer-container,
+.hero-container {
+    width: min(92%, var(--max-width));
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header-container {
+    min-height: 78px;
+    gap: 1.5rem;
+}
+
+.logo {
+    order: initial;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+}
+
+.primary-navigation {
+    position: static;
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.primary-navigation ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0;
+}
+
+.primary-navigation li {
+    width: auto;
+}
+
+.nav-link {
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.nav-link.active::after {
+    display: block;
+}
+
+.nav-link.list-business {
+    margin-top: 0;
+    padding: 0.7rem 1rem;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+    min-height: 580px;
+}
+
+.hero-content {
+    padding: 5rem 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+}
+
+.hero-search {
+    grid-template-columns: 1.3fr 1fr auto;
+}
+
+.search-button {
+    min-height: auto;
+}
+
+/* ==========================================================
+   GENERAL SECTIONS
+========================================================== */
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-heading {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   CATEGORIES
+========================================================== */
+
+.category-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================================================
+   HOW IT WORKS
+========================================================== */
+
+.steps {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==========================================================
+   FEATURED BUSINESSES
+========================================================== */
+
+.heading-with-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: none;
+    text-align: left;
+}
+
+.heading-with-link .section-heading {
+    margin: 0;
+}
+
+.heading-with-link .view-all-link {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================================================
+   ABOUT
+========================================================== */
+
+.about-container {
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 4rem;
+}
+
+.about-highlight {
+    grid-template-columns: 1fr;
+}
+
+/* ==========================================================
+   HOMEPAGE CONTACT
+========================================================== */
+
+.contact-content {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================================================
+   ABOUT - PHASE 4
+========================================================== */
+
+.about-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about-section,
+.contact-section,
+.list-business-section,
+.list-business-page {
+    padding: 5rem 0;
+}
+
+/* ==========================================================
+   CONTACT - PHASE 4
+========================================================== */
+
+.contact-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 3rem;
+}
+
+.contact-information {
+    padding-top: 1rem;
+}
+
+/* ==========================================================
+   FORMS
+========================================================== */
+
+.form-card {
+    padding: 2rem;
+}
+
+/* ==========================================================
+   LIST YOUR BUSINESS
+========================================================== */
+
+.list-business-header {
+    margin-bottom: 2.5rem;
+}
+
+.list-business-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.footer-brand {
+    grid-column: auto;
+}
+
+.footer-links {
+    width: 100%;
+}
+
+.footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}

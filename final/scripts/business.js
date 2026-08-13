@@ -11,49 +11,24 @@ import { getBusinesses } from "./modules/data.js";
 ========================================================== */
 
 const loadingMessage = document.querySelector("#loading-message");
-
 const errorMessage = document.querySelector("#error-message");
-
 const businessProfile = document.querySelector("#business-profile");
-
 const businessImage = document.querySelector("#business-image");
-
 const businessName = document.querySelector("#business-name");
-
 const breadcrumbName = document.querySelector("#breadcrumb-name");
-
-const businessCategory =
-    document.querySelector("#business-category");
-
+const businessCategory = document.querySelector("#business-category");
 const businessRating = document.querySelector("#business-rating");
-
-const businessLocation =
-    document.querySelector("#business-location");
-
-const businessDescription =
-    document.querySelector("#business-description");
-
-const businessServices =
-    document.querySelector("#business-services");
-
+const businessLocation = document.querySelector("#business-location");
+const businessDescription = document.querySelector("#business-description");
+const businessServices = document.querySelector("#business-services");
 const businessHours = document.querySelector("#business-hours");
-
 const businessStatus = document.querySelector("#business-status");
-
 const businessPhone = document.querySelector("#business-phone");
-
 const businessEmail = document.querySelector("#business-email");
-
-const sidebarLocation =
-    document.querySelector("#sidebar-location");
-
+const sidebarLocation = document.querySelector("#sidebar-location");
 const saveButton = document.querySelector("#save-button");
-
-const saveButtonText =
-    document.querySelector("#save-button-text");
-
-const contactButton =
-    document.querySelector("#contact-button");
+const saveButtonText = document.querySelector("#save-button-text");
+const contactButton = document.querySelector("#contact-button");
 
 const contactDialog =
     document.querySelector("#contact-dialog");
@@ -74,14 +49,12 @@ const dialogBusinessName =
 /* ==========================================================
    STATE
 ========================================================== */
-
 let currentBusiness = null;
 
 
 /* ==========================================================
    GET BUSINESS ID
 ========================================================== */
-
 function getBusinessId() {
 
     const params = new URLSearchParams(
@@ -95,7 +68,6 @@ function getBusinessId() {
 /* ==========================================================
    INITIALIZE
 ========================================================== */
-
 async function initializeProfile() {
 
     const businessId = getBusinessId();

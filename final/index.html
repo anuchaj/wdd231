@@ -22,7 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(max-width: 950px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 901px)">
 
     <!-- JavaScript -->
     <script type="module" src="scripts/main.js"></script>
@@ -51,7 +53,7 @@
                     <li><a class="nav-link" href="businesses.html">Businesses</a></li>
                     <li><a class="nav-link" href="#about">About Us</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link list-business" href="#list-business">List Your Business</a></li>
+                    <li><a class="nav-link list-business" href="list-business.html">List Your Business</a></li>
                 </ul>
             </nav>
 
@@ -229,39 +231,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about section" id="about">
-            <div class="section-container about-container">
-                <div class="about-content">
-                    <p class="section-label">ABOUT EXPRESS HANDS</p>
-                    <h2>Connecting People With Trusted Professionals</h2>
-
-                    <p>Express Hands makes it easier to find businesses and skilled professionals for everyday services.</p>
-
-                    <p>Whether you need a technician, mechanic, tutor, electrician, designer or another professional, Express Hands helps you discover available options and connect with the right service provider.</p>
-
-                    <a class="primary-button" href="businesses.html">Find a Business</a>
-                </div>
-
-                <div class="about-highlight">
-                    <div class="about-stat">
-                        <strong>15+</strong>
-                        <span>Business Listings</span>
-                    </div>
-
-                    <div class="about-stat">
-                        <strong>7+</strong>
-                        <span>Service Categories</span>
-                    </div>
-
-                    <div class="about-stat">
-                        <strong>24/7</strong>
-                        <span>Online Access</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- List Your Business -->
         <section class="business-cta section" id="list-business">
             <div class="section-container">
@@ -272,40 +241,181 @@
                     <a class="cta-button" href="#contact">List Your Business</a>
                 </div>
             </div>
-        </section>
+        </section>      
 
-        <!-- Contact -->
-        <section class="contact section" id="contact">
+        <!-- ==========================================================
+            ABOUT US
+        ========================================================== -->
+        <section class="about-section" id="about">
             <div class="section-container">
                 <div class="section-heading">
-                    <p class="section-label">GET IN TOUCH</p>
-                    <h2>Contact Us</h2>
-                    <p>Have a question about Express Hands? We'd love to hear from you.</p>
+                    <p class="section-label">ABOUT EXPRESS HANDS</p>
+                    <h2>Connecting People With Trusted Professionals</h2>
+                    <p>
+                        Express Hands makes it easier for individuals and
+                        businesses to find reliable professionals and
+                        service providers in their local communities.
+                    </p>
                 </div>
 
-                <div class="contact-content">
-                    <div class="contact-item">
-                        <span aria-hidden="true">📧</span>
-                        <div>
-                            <h3>Email</h3>
-                            <p>hello@expresshands.example</p>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <div class="about-icon" aria-hidden="true">🤝</div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            Our mission is to make finding trusted
+                            professionals simple, convenient, and
+                            accessible.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="about-icon" aria-hidden="true">✓</div>
+                        <h3>Trusted Connections</h3>
+                        <p>
+                            We help users discover professionals and
+                            businesses based on their services,
+                            locations, and customer ratings.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="about-icon" aria-hidden="true">⚡</div>
+                        <h3>Simple &amp; Convenient</h3>
+                        <p>
+                            Express Hands provides a simple way to
+                            search for services and connect with
+                            professionals without unnecessary steps.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+            CONTACT
+        ========================================================== -->
+
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-information">
+                        <p class="section-label">GET IN TOUCH</p>
+                        <h2>Contact Express Hands</h2>
+                        <p>
+                            Have a question, suggestion, or need help
+                            finding the right professional? Send us a
+                            message and we'll be happy to hear from you.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon" aria-hidden="true">✉</span>
+                                <div>
+                                    <span class="contact-detail-label">Email</span>
+                                    <a href="mailto:hello@expresshands.com">
+                                        hello@expresshands.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon" aria-hidden="true">☎</span>
+                                <div>
+                                    <span class="contact-detail-label">Phone</span>
+                                    <a href="tel:+2348000000000">
+                                        +234 800 000 0000
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon" aria-hidden="true">📍</span>
+                                <div>
+                                    <span class="contact-detail-label">Location</span>
+                                    <span>Aba, Abia State, Nigeria</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <span aria-hidden="true">📞</span>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+234 800 000 0000</p>
-                        </div>
-                    </div>
+                    <!-- Contact Form -->
+                    <div class="form-card">
+                        <h2>Send Us a Message</h2>
+                        <p>
+                            Complete the form below and we'll get back
+                            to you.
+                        </p>
 
-                    <div class="contact-item">
-                        <span aria-hidden="true">📍</span>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Aba, Abia State, Nigeria</p>
-                        </div>
+                        <form id="contact-form" novalidate>
+                            <div class="form-field">
+                                <label for="contact-name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                >
+                                <small
+                                    class="form-error"
+                                    id="contact-name-error"
+                                ></small>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    name="email"
+                                    autocomplete="email"
+                                    required
+                                >
+                                <small
+                                    class="form-error"
+                                    id="contact-email-error"
+                                ></small>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="contact-subject"
+                                    name="subject"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-message">Message</label>
+                                <textarea
+                                    id="contact-message"
+                                    name="message"
+                                    rows="6"
+                                    required
+                                ></textarea>
+                                <small
+                                    class="form-error"
+                                    id="contact-message-error"
+                                ></small>
+                            </div>
+
+                            <button class="primary-button" type="submit">
+                                Send Message
+                            </button>
+
+                            <p
+                                class="form-success"
+                                id="contact-success"
+                                role="status"
+                                hidden
+                            >
+                                Thank you! Your message has been received.
+                            </p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -338,7 +448,7 @@
             <div class="footer-links">
                 <h2>For Businesses</h2>
                 <ul>
-                    <li><a href="#list-business">List Your Business</a></li>
+                    <li><a href="list-business.html">List Your Business</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>

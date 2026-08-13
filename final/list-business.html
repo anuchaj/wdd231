@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List your business on Express Hands and connect with customers looking for trusted local professionals.">
+    <meta name="author" content="Express Hands">
+    <meta property="og:title" content="Express Hands | List Your Business">
+    <meta property="og:description" content="List your business on Express Hands and connect with potential customers.">
+    <meta property="og:type" content="website">
+    <title>Express Hands | List Your Business</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 901px)">
+
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a class="logo" href="index.html" aria-label="Express Hands home">
+                <span class="logo-icon" aria-hidden="true">EH</span>
+                <span class="logo-text">Express Hands</span>
+            </a>
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link" href="businesses.html">Businesses</a></li>
+                    <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li>
+                        <a class="nav-link list-business" href="list-business.html" aria-current="page">
+                            List Your Business
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="notification-button" type="button" aria-label="Notifications">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+    <main>
+        <section class="list-business-page">
+            <div class="section-container">
+                <!-- Page Heading -->
+                <div class="list-business-header">
+                    <p class="section-label">FOR BUSINESS OWNERS</p>
+                    <h1>List Your Business on Express Hands</h1>
+                    <p>
+                        Connect your business with people looking
+                        for trusted professionals and services in
+                        their local community.
+                    </p>
+                </div>
+
+                <div class="list-business-grid">
+                    <!-- ==============================
+                         BENEFITS
+                    =============================== -->
+                    <div class="business-benefits">
+                        <h2>Why List Your Business?</h2>
+                        <p>
+                            Express Hands helps businesses become
+                            easier to discover by connecting them
+                            with customers who are actively looking
+                            for their services.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <span aria-hidden="true">✓</span>
+                                <div>
+                                    <strong>Reach More Customers</strong>
+                                    <p>
+                                        Make your business visible
+                                        to people searching for
+                                        your services.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span aria-hidden="true">✓</span>
+                                <div>
+                                    <strong>Showcase Your Services</strong>
+                                    <p>
+                                        Tell potential customers
+                                        what your business offers.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span aria-hidden="true">✓</span>
+                                <div>
+                                    <strong>Build Your Online Presence</strong>
+                                    <p>
+                                        Give customers access to
+                                        your business information
+                                        in one convenient place.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span aria-hidden="true">✓</span>
+                                <div>
+                                    <strong>Connect With Customers</strong>
+                                    <p>
+                                        Make it easier for interested
+                                        customers to contact you.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ==============================
+                         BUSINESS FORM
+                    =============================== -->
+                    <div class="form-card">
+                        <h2>Business Information</h2>
+                        <p>
+                            Complete the form below to submit
+                            your business for consideration.
+                        </p>
+
+                        <form id="business-form" novalidate>
+                            <div class="form-field">
+                                <label for="business-owner">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="business-owner"
+                                    name="owner"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="business-email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="business-email"
+                                    name="email"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="business-name">Business Name</label>
+                                <input
+                                    type="text"
+                                    id="business-name"
+                                    name="businessName"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="business-category">Business Category</label>
+                                <select id="business-category" name="category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="Plumbing">Plumbing</option>
+                                    <option value="Automotive">Automotive</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Home Services">Home Services</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="business-location">Business Location</label>
+                                <input
+                                    type="text"
+                                    id="business-location"
+                                    name="location"
+                                    placeholder="e.g. Aba, Abia State"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="business-description">Business Description</label>
+                                <textarea
+                                    id="business-description"
+                                    name="description"
+                                    rows="6"
+                                    placeholder="Briefly describe your business and services."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button class="primary-button" type="submit">
+                                Submit Business
+                            </button>
+
+                            <p
+                                class="form-success"
+                                id="business-success"
+                                role="status"
+                                hidden
+                            >
+                                Thank you! Your business listing
+                                request has been submitted.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="section-container about-container">
+                <div class="about-content">
+                    <p class="section-label">ABOUT EXPRESS HANDS</p>
+                    <h2>Connecting People With Trusted Professionals</h2>
+
+                    <p>Express Hands makes it easier to find businesses and skilled professionals for everyday services.</p>
+
+                    <p>Whether you need a technician, mechanic, tutor, electrician, designer or another professional, Express Hands helps you discover available options and connect with the right service provider.</p>
+
+                    <a class="primary-button" href="businesses.html">Find a Business</a>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-stat">
+                        <strong>15+</strong>
+                        <span>Business Listings</span>
+                    </div>
+
+                    <div class="about-stat">
+                        <strong>7+</strong>
+                        <span>Service Categories</span>
+                    </div>
+
+                    <div class="about-stat">
+                        <strong>24/7</strong>
+                        <span>Online Access</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="index.html">
+                    <span class="logo-icon" aria-hidden="true">EH</span>
+                    <span class="logo-text">Express Hands</span>
+                </a>
+                <p>
+                    Connecting you with trusted professionals
+                    and local businesses.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="businesses.html">Businesses</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>For Businesses</h2>
+                <ul>
+                    <li>
+                        <a href="list-business.html">List Your Business</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy;
+                <span id="current-year"></span>
+                Express Hands.
+                All rights reserved.
+            </p>
+            <p>WDD 231 Individual Website Project</p>
+        </div>
+    </footer>
+</body>
+</html>

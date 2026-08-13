@@ -1,0 +1,171 @@
+/* ==========================================================
+   EXPRESS HANDS
+   WDD 231 Individual Website Project
+   MEDIUM SCREEN STYLES
+   Tablet / medium screens: 601–900px
+========================================================== */
+
+/* ==========================================================
+   GLOBAL CONTAINERS
+========================================================== */
+
+.section-container,
+.header-container,
+.footer-container,
+.hero-container {
+    width: min(92%, var(--max-width));
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header-container {
+    min-height: 72px;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.1rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.primary-navigation {
+    top: 72px;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-content {
+    padding: 4.5rem 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 7vw, 4rem);
+}
+
+.hero-description {
+    font-size: 1.05rem;
+}
+
+.hero-search {
+    grid-template-columns: 1.2fr 1fr auto;
+}
+
+/* ==========================================================
+   GENERAL SECTIONS
+========================================================== */
+
+.section {
+    padding: 4.5rem 0;
+}
+
+.section-heading {
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================================
+   CATEGORIES
+========================================================== */
+
+.category-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==========================================================
+   HOW IT WORKS
+========================================================== */
+
+.steps {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==========================================================
+   FEATURED BUSINESSES
+========================================================== */
+
+.heading-with-link {
+    display: block;
+}
+
+.featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==========================================================
+   ABOUT
+========================================================== */
+
+.about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.about-highlight {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================================================
+   HOMEPAGE CONTACT
+========================================================== */
+
+.contact-content {
+    grid-template-columns: 1fr;
+}
+
+/* ==========================================================
+   ABOUT - PHASE 4
+========================================================== */
+
+.about-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==========================================================
+   CONTACT - PHASE 4
+========================================================== */
+
+.contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ==========================================================
+   LIST YOUR BUSINESS
+========================================================== */
+
+.list-business-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer-container {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2.5rem;
+    padding: 3.5rem 0;
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+
+.footer-links {
+    width: 100%;
+}
+
+.footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
