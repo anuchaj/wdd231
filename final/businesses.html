@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and compare trusted businesses and professional service providers on Express Hands.">
+    <meta name="author" content="Express Hands">
+    <meta property="og:title" content="Express Hands | Businesses">
+    <meta property="og:description" content="Browse trusted local businesses and professional service providers.">
+    <meta property="og:type" content="website">
+
+    <title>Express Hands | Businesses</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/businesses.css">
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/businesses.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a class="logo" href="index.html" aria-label="Express Hands home">
+                <span class="logo-icon" aria-hidden="true">EH</span>
+                <span class="logo-text">Express Hands</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Primary Navigation -->
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link active" href="businesses.html" aria-current="page">Businesses</a></li>
+                    <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li><a class="nav-link list-business" href="index.html#list-business">List Your Business</a></li>
+                </ul>
+            </nav>
+
+            <!-- Notification -->
+            <button class="notification-button" type="button" aria-label="Notifications">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="directory-hero">
+            <div class="section-container">
+                <p class="section-label">EXPRESS HANDS DIRECTORY</p>
+                <h1>Find Trusted Businesses</h1>
+                <p>Browse, search, and compare professional businesses and service providers.</p>
+            </div>
+        </section>
+
+        <!-- Directory -->
+        <section class="directory section">
+            <div class="section-container">
+                <!-- Search and Filters -->
+                <div class="directory-controls">
+                    <div class="directory-search">
+                        <label for="business-search">Search Businesses</label>
+                        <input type="search" id="business-search" placeholder="Search by business or service..." autocomplete="off">
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-field">
+                            <label for="category-filter">Category</label>
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-field">
+                            <label for="location-filter">Location</label>
+                            <select id="location-filter">
+                                <option value="all">All Locations</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-field">
+                            <label for="rating-filter">Rating</label>
+                            <select id="rating-filter">
+                                <option value="0">Any Rating</option>
+                                <option value="4.5">4.5+ Stars</option>
+                                <option value="4">4.0+ Stars</option>
+                                <option value="3.5">3.5+ Stars</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-field">
+                            <label for="sort-filter">Sort</label>
+                            <select id="sort-filter">
+                                <option value="default">Recommended</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="reviews">Most Reviews</option>
+                                <option value="name">Name A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Summary -->
+                <div class="results-summary" aria-live="polite">
+                    <p><strong id="results-count">0</strong> businesses found</p>
+                </div>
+
+                <!-- Loading State -->
+                <div class="directory-status" id="loading-message">
+                    <p>Loading businesses...</p>
+                </div>
+
+                <!-- Error State -->
+                <div class="directory-status error-message" id="error-message" hidden>
+                    <h2>Unable to load businesses</h2>
+                    <p>We could not load the business directory. Please refresh the page and try again.</p>
+                </div>
+
+                <!-- No Results State -->
+                <div class="directory-status" id="no-results" hidden>
+                    <h2>No businesses found</h2>
+                    <p>Try changing your search or filter options.</p>
+                    <button class="reset-button" id="reset-filters" type="button">Reset Filters</button>
+                </div>
+
+                <!-- Business Cards -->
+                <div class="business-grid" id="business-grid">
+                    <!-- JavaScript inserts businesses here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="index.html">
+                    <span class="logo-icon" aria-hidden="true">EH</span>
+                    <span class="logo-text">Express Hands</span>
+                </a>
+
+                <p>Connecting you with trusted professionals and local businesses.</p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="businesses.html">Businesses</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>For Businesses</h2>
+                <ul>
+                    <li><a href="index.html#list-business">List Your Business</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
+            <p>WDD 231 Individual Website Project</p>
+        </div>
+    </footer>
+</body>
+</html>

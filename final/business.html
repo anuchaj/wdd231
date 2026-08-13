@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View detailed business information on Express Hands.">
+    <meta name="author" content="Express Hands">
+    <meta property="og:title" content="Express Hands | Business Profile">
+    <meta property="og:description" content="View business information, services, ratings, and contact details.">
+    <meta property="og:type" content="website">
+
+    <title>Express Hands | Business Profile</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/business.css">
+
+    <script type="module" src="scripts/business.js"></script>
+</head>
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+        <div class="header-container">
+            <a class="logo" href="index.html" aria-label="Express Hands home">
+                <span class="logo-icon" aria-hidden="true">EH</span>
+                <span class="logo-text">Express Hands</span>
+            </a>
+
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link active" href="businesses.html" aria-current="page">Businesses</a></li>
+                    <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li><a class="nav-link list-business" href="index.html#list-business">List Your Business</a></li>
+                </ul>
+            </nav>
+
+            <button class="notification-button" type="button" aria-label="Notifications">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             LOADING STATE
+        ========================== -->
+
+        <section class="profile-status" id="loading-message">
+            <div class="section-container">
+                <p>Loading business profile...</p>
+            </div>
+        </section>
+
+        <!-- =========================
+             ERROR STATE
+        ========================== -->
+
+        <section class="profile-status error-profile" id="error-message" hidden>
+            <div class="section-container">
+                <h1>Business Not Found</h1>
+                <p>We could not find the business you are looking for.</p>
+                <a class="primary-button" href="businesses.html">Return to Businesses</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             BUSINESS PROFILE
+        ========================== -->
+
+        <section class="business-profile" id="business-profile" hidden>
+            <div class="section-container">
+
+                <!-- Breadcrumb -->
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="businesses.html">Businesses</a>
+                    <span aria-hidden="true">/</span>
+                    <span id="breadcrumb-name">Business</span>
+                </nav>
+
+                <!-- Profile Header -->
+
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img id="business-image" src="" alt="">
+                    </div>
+
+                    <div class="profile-heading">
+                        <p class="business-category" id="business-category"></p>
+                        <h1 id="business-name"></h1>
+                        <div class="profile-rating" id="business-rating"></div>
+                        <p class="profile-location" id="business-location"></p>
+
+                        <div class="profile-actions">
+                            <button class="primary-button" id="contact-button" type="button">Contact Business</button>
+                            <button class="secondary-button" id="save-button" type="button" aria-pressed="false">
+                                <span aria-hidden="true">♡</span>
+                                <span id="save-button-text">Save Business</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Content -->
+
+                <div class="profile-content">
+
+                    <!-- Main Information -->
+
+                    <article class="profile-main">
+                        <section class="profile-section">
+                            <h2>About This Business</h2>
+                            <p id="business-description"></p>
+                        </section>
+
+                        <section class="profile-section">
+                            <h2>Services</h2>
+                            <ul class="profile-services" id="business-services"></ul>
+                        </section>
+
+                        <section class="profile-section">
+                            <h2>Business Hours</h2>
+                            <p class="business-hours" id="business-hours"></p>
+                            <span class="business-open-status" id="business-status"></span>
+                        </section>
+                    </article>
+
+                    <!-- Contact Sidebar -->
+
+                    <aside class="profile-sidebar">
+                        <div class="contact-card">
+                            <h2>Contact Information</h2>
+
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">☎</span>
+                                <div>
+                                    <span class="contact-label">Phone</span>
+                                    <a id="business-phone" href=""></a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">✉</span>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <a id="business-email" href=""></a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">📍</span>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span id="sidebar-location"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="help-card">
+                            <h2>Need Help?</h2>
+                            <p>Express Hands helps you connect with trusted professionals and businesses.</p>
+                            <a href="index.html#contact" class="secondary-button">Contact Express Hands</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             CONTACT DIALOG
+        ========================== -->
+
+        <dialog id="contact-dialog" class="contact-dialog">
+            <div class="dialog-header">
+                <div>
+                    <p class="section-label">EXPRESS HANDS</p>
+                    <h2>Contact Business</h2>
+                </div>
+
+                <button id="close-dialog" class="dialog-close" type="button" aria-label="Close contact form">&times;</button>
+            </div>
+
+            <form id="contact-form" method="dialog">
+                <p class="dialog-business">
+                    You are contacting <strong id="dialog-business-name"></strong>
+                </p>
+
+                <div class="form-field">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" name="name" required autocomplete="name">
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-email">Your Email</label>
+                    <input type="email" id="contact-email" name="email" required autocomplete="email">
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="5" required placeholder="How can this business help you?"></textarea>
+                </div>
+
+                <div class="dialog-actions">
+                    <button class="secondary-button" id="cancel-dialog" type="button">Cancel</button>
+                    <button class="primary-button" type="submit">Send Message</button>
+                </div>
+            </form>
+        </dialog>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="index.html">
+                    <span class="logo-icon" aria-hidden="true">EH</span>
+                    <span class="logo-text">Express Hands</span>
+                </a>
+
+                <p>Connecting you with trusted professionals and local businesses.</p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="businesses.html">Businesses</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>For Businesses</h2>
+                <ul>
+                    <li><a href="index.html#list-business">List Your Business</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
+            <p>WDD 231 Individual Website Project</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Express Hands connects you with trusted local businesses and skilled professionals for the services you need.">
+    <meta name="author" content="Express Hands">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Express Hands | Find Trusted Local Services">
+    <meta property="og:description" content="Find trusted businesses and skilled professionals through Express Hands.">
+    <meta property="og:type" content="website">
+
+    <title>Express Hands | Find Trusted Local Services</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a class="logo" href="index.html" aria-label="Express Hands home">
+                <span class="logo-icon" aria-hidden="true">EH</span>
+                <span class="logo-text">Express Hands</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Primary Navigation -->
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a class="nav-link active" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="businesses.html">Businesses</a></li>
+                    <li><a class="nav-link" href="#about">About Us</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link list-business" href="#list-business">List Your Business</a></li>
+                </ul>
+            </nav>
+
+            <!-- Notification -->
+            <button class="notification-button" type="button" aria-label="Notifications">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-label">YOUR LOCAL SERVICE CONNECTION</p>
+
+                    <h1>Find Trusted <span>Hands</span> Near You</h1>
+
+                    <p class="hero-description">Connect with trusted businesses and skilled professionals ready to provide the services you need.</p>
+
+                    <!-- Search -->
+                    <form class="hero-search" id="hero-search">
+                        <div class="search-field">
+                            <label for="service-search">What service do you need?</label>
+                            <input type="search" id="service-search" name="service" placeholder="e.g. electrician, plumber..." autocomplete="off">
+                        </div>
+
+                        <div class="search-field">
+                            <label for="location-search">Location</label>
+                            <input type="text" id="location-search" name="location" placeholder="Enter your location" autocomplete="address-level2">
+                        </div>
+
+                        <button class="search-button" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Categories -->
+        <section class="categories section" id="services">
+            <div class="section-container">
+                <div class="section-heading">
+                    <p class="section-label">EXPLORE SERVICES</p>
+                    <h2>Popular Categories</h2>
+                    <p>Find professionals and businesses that can help with your everyday needs.</p>
+                </div>
+
+                <div class="category-grid">
+                    <a class="category-card" href="businesses.html?category=Home%20Services">
+                        <span class="category-icon" aria-hidden="true">🏠</span>
+                        <h3>Home Services</h3>
+                        <p>Plumbing, electrical, repairs and more.</p>
+                    </a>
+
+                    <a class="category-card" href="businesses.html?category=IT%20%26%20Tech">
+                        <span class="category-icon" aria-hidden="true">💻</span>
+                        <h3>IT &amp; Tech</h3>
+                        <p>Technology, computer and digital services.</p>
+                    </a>
+
+                    <a class="category-card" href="businesses.html?category=Business%20Services">
+                        <span class="category-icon" aria-hidden="true">💼</span>
+                        <h3>Business Services</h3>
+                        <p>Professional services for businesses.</p>
+                    </a>
+
+                    <a class="category-card" href="businesses.html?category=Health%20%26%20Wellness">
+                        <span class="category-icon" aria-hidden="true">❤️</span>
+                        <h3>Health &amp; Wellness</h3>
+                        <p>Services that support your health and wellbeing.</p>
+                    </a>
+
+                    <a class="category-card" href="businesses.html?category=Automotive">
+                        <span class="category-icon" aria-hidden="true">🚗</span>
+                        <h3>Automotive</h3>
+                        <p>Mechanics, auto repairs and vehicle services.</p>
+                    </a>
+
+                    <a class="category-card" href="businesses.html?category=Education">
+                        <span class="category-icon" aria-hidden="true">📚</span>
+                        <h3>Education</h3>
+                        <p>Tutors, training and educational services.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works section">
+            <div class="section-container">
+                <div class="section-heading">
+                    <p class="section-label">SIMPLE &amp; CONVENIENT</p>
+                    <h2>How It Works</h2>
+                    <p>Finding the right professional is simple with Express Hands.</p>
+                </div>
+
+                <div class="steps">
+                    <article class="step">
+                        <span class="step-number">01</span>
+                        <div class="step-icon" aria-hidden="true">🔎</div>
+                        <h3>Search</h3>
+                        <p>Search for the service or professional you need.</p>
+                    </article>
+
+                    <article class="step">
+                        <span class="step-number">02</span>
+                        <div class="step-icon" aria-hidden="true">⚖️</div>
+                        <h3>Compare</h3>
+                        <p>Compare businesses, services, ratings and reviews.</p>
+                    </article>
+
+                    <article class="step">
+                        <span class="step-number">03</span>
+                        <div class="step-icon" aria-hidden="true">🤝</div>
+                        <h3>Connect</h3>
+                        <p>Contact the professional or business directly.</p>
+                    </article>
+
+                    <article class="step">
+                        <span class="step-number">04</span>
+                        <div class="step-icon" aria-hidden="true">✓</div>
+                        <h3>Get It Done</h3>
+                        <p>Get the job completed by a trusted professional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Businesses -->
+        <section class="featured section">
+            <div class="section-container">
+                <div class="section-heading heading-with-link">
+                    <div>
+                        <p class="section-label">TRUSTED PROFESSIONALS</p>
+                        <h2>Featured Businesses</h2>
+                        <p>Discover some of the businesses available through Express Hands.</p>
+                    </div>
+
+                    <a class="view-all-link" href="businesses.html">View All Businesses</a>
+                </div>
+
+                <!-- Business cards will be generated dynamically from businesses.json in a later phase. -->
+                <div class="featured-grid" id="featured-businesses">
+                    <article class="business-placeholder">
+                        <div class="placeholder-image">Business Image</div>
+
+                        <div class="placeholder-content">
+                            <p class="placeholder-category">Featured Business</p>
+                            <h3>Trusted Local Professionals</h3>
+                            <p>Business listings will appear here as they are loaded from the Express Hands data.</p>
+                        </div>
+                    </article>
+
+                    <article class="business-placeholder">
+                        <div class="placeholder-image">Business Image</div>
+
+                        <div class="placeholder-content">
+                            <p class="placeholder-category">Featured Business</p>
+                            <h3>Quality Services Near You</h3>
+                            <p>Discover reliable professionals and businesses in your area.</p>
+                        </div>
+                    </article>
+
+                    <article class="business-placeholder">
+                        <div class="placeholder-image">Business Image</div>
+
+                        <div class="placeholder-content">
+                            <p class="placeholder-category">Featured Business</p>
+                            <h3>Get the Job Done</h3>
+                            <p>Connect with professionals who are ready to help.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="section-container about-container">
+                <div class="about-content">
+                    <p class="section-label">ABOUT EXPRESS HANDS</p>
+                    <h2>Connecting People With Trusted Professionals</h2>
+
+                    <p>Express Hands makes it easier to find businesses and skilled professionals for everyday services.</p>
+
+                    <p>Whether you need a technician, mechanic, tutor, electrician, designer or another professional, Express Hands helps you discover available options and connect with the right service provider.</p>
+
+                    <a class="primary-button" href="businesses.html">Find a Business</a>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-stat">
+                        <strong>15+</strong>
+                        <span>Business Listings</span>
+                    </div>
+
+                    <div class="about-stat">
+                        <strong>7+</strong>
+                        <span>Service Categories</span>
+                    </div>
+
+                    <div class="about-stat">
+                        <strong>24/7</strong>
+                        <span>Online Access</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- List Your Business -->
+        <section class="business-cta section" id="list-business">
+            <div class="section-container">
+                <div class="cta-content">
+                    <p class="section-label">FOR BUSINESS OWNERS</p>
+                    <h2>Want More Customers?</h2>
+                    <p>List your business on Express Hands and make it easier for customers to discover your services.</p>
+                    <a class="cta-button" href="#contact">List Your Business</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="section-container">
+                <div class="section-heading">
+                    <p class="section-label">GET IN TOUCH</p>
+                    <h2>Contact Us</h2>
+                    <p>Have a question about Express Hands? We'd love to hear from you.</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <span aria-hidden="true">📧</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@expresshands.example</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span aria-hidden="true">📞</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+234 800 000 0000</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Aba, Abia State, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="index.html">
+                    <span class="logo-icon" aria-hidden="true">EH</span>
+                    <span class="logo-text">Express Hands</span>
+                </a>
+
+                <p>Connecting you with trusted professionals and local businesses.</p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="businesses.html">Businesses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>For Businesses</h2>
+                <ul>
+                    <li><a href="#list-business">List Your Business</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
+            <p>WDD 231 Individual Website Project</p>
+        </div>
+    </footer>
+</body>
+</html>

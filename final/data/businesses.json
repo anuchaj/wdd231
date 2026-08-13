@@ -1,0 +1,362 @@
+[
+    {
+        "id": "eh001",
+        "name": "BrightSpark Electrical Services",
+        "category": "Home Services",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.8,
+        "reviews": 126,
+        "phone": "+234 800 000 0001",
+        "email": "brightspark@example.com",
+        "hours": "8:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Professional electrical installation, repairs, wiring, and generator services for homes and businesses.",
+        "services": [
+            "Electrical Repairs",
+            "House Wiring",
+            "Generator Installation"
+        ],
+        "image": "images/businesses/business-01.webp"
+    },
+    {
+        "id": "eh002",
+        "name": "Aba Plumbing Solutions",
+        "category": "Home Services",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.7,
+        "reviews": 98,
+        "phone": "+234 800 000 0002",
+        "email": "abaplumbing@example.com",
+        "hours": "7:00 AM - 7:00 PM",
+        "status": "Open",
+        "description": "Reliable plumbing installation and repair services for residential and commercial properties.",
+        "services": [
+            "Pipe Repairs",
+            "Water Installation",
+            "Drain Cleaning"
+        ],
+        "image": "images/businesses/business-02.webp"
+    },
+    {
+        "id": "eh003",
+        "name": "CoolTech Systems",
+        "category": "IT & Tech",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.9,
+        "reviews": 84,
+        "phone": "+234 800 000 0003",
+        "email": "cooltech@example.com",
+        "hours": "9:00 AM - 5:00 PM",
+        "status": "Open",
+        "description": "Computer repairs, networking, software installation, and technology support for individuals and businesses.",
+        "services": [
+            "Computer Repairs",
+            "Networking",
+            "IT Support"
+        ],
+        "image": "images/businesses/business-03.webp"
+    },
+    {
+        "id": "eh004",
+        "name": "Digital Bridge Solutions",
+        "category": "IT & Tech",
+        "location": "Umuahia",
+        "state": "Abia",
+        "rating": 4.6,
+        "reviews": 67,
+        "phone": "+234 800 000 0004",
+        "email": "digitalbridge@example.com",
+        "hours": "8:00 AM - 5:30 PM",
+        "status": "Open",
+        "description": "Web development, digital marketing, graphic design, and technology consulting services.",
+        "services": [
+            "Web Development",
+            "Graphic Design",
+            "Digital Marketing"
+        ],
+        "image": "images/businesses/business-04.webp"
+    },
+    {
+        "id": "eh005",
+        "name": "ProBiz Consulting",
+        "category": "Business Services",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.8,
+        "reviews": 73,
+        "phone": "+234 800 000 0005",
+        "email": "probiz@example.com",
+        "hours": "9:00 AM - 5:00 PM",
+        "status": "Open",
+        "description": "Business consulting, planning, bookkeeping, and professional advisory services for growing businesses.",
+        "services": [
+            "Business Consulting",
+            "Bookkeeping",
+            "Business Planning"
+        ],
+        "image": "images/businesses/business-05.webp"
+    },
+    {
+        "id": "eh006",
+        "name": "Creative Edge Media",
+        "category": "Business Services",
+        "location": "Umuahia",
+        "state": "Abia",
+        "rating": 4.5,
+        "reviews": 52,
+        "phone": "+234 800 000 0006",
+        "email": "creativeedge@example.com",
+        "hours": "9:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Professional photography, branding, social media management, and content creation services.",
+        "services": [
+            "Photography",
+            "Branding",
+            "Social Media"
+        ],
+        "image": "images/businesses/business-06.webp"
+    },
+    {
+        "id": "eh007",
+        "name": "Wellness First Clinic",
+        "category": "Health & Wellness",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.9,
+        "reviews": 145,
+        "phone": "+234 800 000 0007",
+        "email": "wellnessfirst@example.com",
+        "hours": "8:00 AM - 8:00 PM",
+        "status": "Open",
+        "description": "Community wellness services focused on preventive care, consultations, and healthy living.",
+        "services": [
+            "Health Consultation",
+            "Wellness Programs",
+            "Health Screening"
+        ],
+        "image": "images/businesses/business-07.webp"
+    },
+    {
+        "id": "eh008",
+        "name": "Healthy Living Pharmacy",
+        "category": "Health & Wellness",
+        "location": "Umuahia",
+        "state": "Abia",
+        "rating": 4.6,
+        "reviews": 91,
+        "phone": "+234 800 000 0008",
+        "email": "healthyliving@example.com",
+        "hours": "8:00 AM - 9:00 PM",
+        "status": "Open",
+        "description": "Community pharmacy providing health products, wellness advice, and everyday healthcare needs.",
+        "services": [
+            "Pharmacy Services",
+            "Health Products",
+            "Wellness Advice"
+        ],
+        "image": "images/businesses/business-08.webp"
+    },
+    {
+        "id": "eh009",
+        "name": "AutoCare Experts",
+        "category": "Automotive",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.8,
+        "reviews": 119,
+        "phone": "+234 800 000 0009",
+        "email": "autocare@example.com",
+        "hours": "8:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Complete vehicle maintenance and repair services provided by experienced automotive technicians.",
+        "services": [
+            "Engine Repairs",
+            "Oil Change",
+            "Vehicle Diagnostics"
+        ],
+        "image": "images/businesses/business-09.webp"
+    },
+    {
+        "id": "eh010",
+        "name": "Reliable Motors Workshop",
+        "category": "Automotive",
+        "location": "Owerri",
+        "state": "Imo",
+        "rating": 4.5,
+        "reviews": 76,
+        "phone": "+234 800 000 0010",
+        "email": "reliablemotors@example.com",
+        "hours": "7:30 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Automotive repair and maintenance services for cars, vans, and light commercial vehicles.",
+        "services": [
+            "Brake Repairs",
+            "Engine Service",
+            "Air Conditioning"
+        ],
+        "image": "images/businesses/business-10.webp"
+    },
+    {
+        "id": "eh011",
+        "name": "Excel Learning Centre",
+        "category": "Education",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.9,
+        "reviews": 63,
+        "phone": "+234 800 000 0011",
+        "email": "excellearning@example.com",
+        "hours": "8:00 AM - 5:00 PM",
+        "status": "Open",
+        "description": "Academic tutoring and learning support for students across multiple subjects and grade levels.",
+        "services": [
+            "Private Tutoring",
+            "Exam Preparation",
+            "Computer Training"
+        ],
+        "image": "images/businesses/business-11.webp"
+    },
+    {
+        "id": "eh012",
+        "name": "SmartStart Tutors",
+        "category": "Education",
+        "location": "Umuahia",
+        "state": "Abia",
+        "rating": 4.7,
+        "reviews": 48,
+        "phone": "+234 800 000 0012",
+        "email": "smartstart@example.com",
+        "hours": "9:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Personalized tutoring and educational support designed to help students achieve their academic goals.",
+        "services": [
+            "Mathematics",
+            "Science",
+            "English"
+        ],
+        "image": "images/businesses/business-12.webp"
+    },
+    {
+        "id": "eh013",
+        "name": "Perfect Moments Events",
+        "category": "Events",
+        "location": "Aba",
+        "state": "Abia",
+        "rating": 4.8,
+        "reviews": 87,
+        "phone": "+234 800 000 0013",
+        "email": "perfectmoments@example.com",
+        "hours": "9:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Event planning and coordination services for weddings, birthdays, corporate events, and celebrations.",
+        "services": [
+            "Event Planning",
+            "Decoration",
+            "Event Coordination"
+        ],
+        "image": "images/businesses/business-13.webp"
+    },
+    {
+        "id": "eh014",
+        "name": "Elegant Events Nigeria",
+        "category": "Events",
+        "location": "Port Harcourt",
+        "state": "Rivers",
+        "rating": 4.6,
+        "reviews": 58,
+        "phone": "+234 800 000 0014",
+        "email": "elegantevents@example.com",
+        "hours": "9:00 AM - 5:30 PM",
+        "status": "Open",
+        "description": "Creative event decoration, planning, rentals, and coordination for memorable occasions.",
+        "services": [
+            "Event Decoration",
+            "Equipment Rental",
+            "Event Planning"
+        ],
+        "image": "images/businesses/business-14.webp"
+    },
+    {
+        "id": "eh015",
+        "name": "CleanPro Home Care",
+        "category": "Home Services",
+        "location": "Owerri",
+        "state": "Imo",
+        "rating": 4.7,
+        "reviews": 105,
+        "phone": "+234 800 000 0015",
+        "email": "cleanpro@example.com",
+        "hours": "7:00 AM - 7:00 PM",
+        "status": "Open",
+        "description": "Professional home and office cleaning services for residential and commercial customers.",
+        "services": [
+            "Home Cleaning",
+            "Office Cleaning",
+            "Deep Cleaning"
+        ],
+        "image": "images/businesses/business-15.webp"
+    },
+    {
+        "id": "eh016",
+        "name": "FreshFix Appliance Repair",
+        "category": "Home Services",
+        "location": "Port Harcourt",
+        "state": "Rivers",
+        "rating": 4.5,
+        "reviews": 61,
+        "phone": "+234 800 000 0016",
+        "email": "freshfix@example.com",
+        "hours": "8:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Repair and maintenance services for household appliances and electronic equipment.",
+        "services": [
+            "Refrigerator Repair",
+            "Washing Machine Repair",
+            "Air Conditioner Repair"
+        ],
+        "image": "images/businesses/business-16.webp"
+    },
+    {
+        "id": "eh017",
+        "name": "SecureNet Technologies",
+        "category": "IT & Tech",
+        "location": "Port Harcourt",
+        "state": "Rivers",
+        "rating": 4.8,
+        "reviews": 72,
+        "phone": "+234 800 000 0017",
+        "email": "securenet@example.com",
+        "hours": "8:00 AM - 6:00 PM",
+        "status": "Open",
+        "description": "Network installation, security systems, computer services, and technology support.",
+        "services": [
+            "Network Installation",
+            "CCTV Installation",
+            "IT Support"
+        ],
+        "image": "images/businesses/business-17.webp"
+    },
+    {
+        "id": "eh018",
+        "name": "Prime Auto Diagnostics",
+        "category": "Automotive",
+        "location": "Enugu",
+        "state": "Enugu",
+        "rating": 4.9,
+        "reviews": 132,
+        "phone": "+234 800 000 0018",
+        "email": "primeauto@example.com",
+        "hours": "8:00 AM - 6:30 PM",
+        "status": "Open",
+        "description": "Professional vehicle diagnostics, maintenance, and mechanical repair services.",
+        "services": [
+            "Vehicle Diagnostics",
+            "Engine Repairs",
+            "Electrical Diagnostics"
+        ],
+        "image": "images/businesses/business-18.webp"
+    }
+]

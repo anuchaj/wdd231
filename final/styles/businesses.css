@@ -1,0 +1,376 @@
+/* ==========================================================
+   EXPRESS HANDS
+   Business Directory Styles
+========================================================== */
+
+/* ==========================================================
+   DIRECTORY HERO
+========================================================== */
+
+.directory-hero {
+    padding: 4.5rem 0;
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.directory-hero .section-label {
+    color: #a9e8cc;
+}
+
+.directory-hero h1 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.directory-hero p:last-child {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: #e6f0f7;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================
+   DIRECTORY
+========================================================== */
+
+.directory {
+    background-color: var(--background);
+}
+
+/* ==========================================================
+   CONTROLS
+========================================================== */
+
+.directory-controls {
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-small);
+}
+
+.directory-search {
+    margin-bottom: 1.5rem;
+}
+
+.directory-search label,
+.filter-field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.directory-search input,
+.filter-field select {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    outline: none;
+}
+
+.directory-search input:focus,
+.filter-field select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
+}
+
+.filter-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* ==========================================================
+   RESULTS SUMMARY
+========================================================== */
+
+.results-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0 1.25rem;
+}
+
+.results-summary p {
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+
+.results-summary strong {
+    color: var(--primary);
+}
+
+/* ==========================================================
+   BUSINESS GRID
+========================================================== */
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ==========================================================
+   BUSINESS CARD
+========================================================== */
+
+.business-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-small);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ==========================================================
+   CARD IMAGE
+========================================================== */
+
+.business-card-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #e8eef5;
+}
+
+.business-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.business-card:hover .business-card-image img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================
+   CARD STATUS
+========================================================== */
+
+.business-status {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    background-color: var(--secondary);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.business-status.closed {
+    background-color: #64748b;
+}
+
+/* ==========================================================
+   CARD CONTENT
+========================================================== */
+
+.business-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.business-category {
+    margin-bottom: 0.4rem;
+    color: var(--secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.business-card h2 {
+    margin-bottom: 0.65rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.business-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.rating-stars {
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.rating-value {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.review-count {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.business-location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.business-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* ==========================================================
+   SERVICES
+========================================================== */
+
+.business-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.service-tag {
+    padding: 0.25rem 0.5rem;
+    background-color: #eef7f3;
+    color: #166b49;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   CARD FOOTER
+========================================================== */
+
+.business-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.view-business {
+    display: inline-block;
+    padding: 0.6rem 0.85rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 5px;
+    font-family: var(--heading-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.view-business:hover,
+.view-business:focus-visible {
+    background-color: var(--secondary);
+}
+
+/* ==========================================================
+   STATUS MESSAGES
+========================================================== */
+
+.directory-status {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.directory-status h2 {
+    color: var(--primary);
+}
+
+.directory-status p {
+    color: var(--text-light);
+}
+
+.error-message {
+    background-color: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+}
+
+.error-message h2 {
+    color: #991b1b;
+}
+
+.reset-button {
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+.reset-button:hover,
+.reset-button:focus-visible {
+    background-color: var(--secondary);
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 950px) {
+    .business-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+    .directory-hero {
+        padding: 3.5rem 0;
+    }
+
+    .directory-controls {
+        padding: 1rem;
+    }
+
+    .filter-group,
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-summary {
+        margin-top: 1.5rem;
+    }
+}
