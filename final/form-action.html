@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Express Hands business listing submission confirmation.">
+    <meta name="author" content="Express Hands">
+    <meta property="og:title" content="Express Hands | Submission Received">
+    <meta property="og:description" content="Your Express Hands business listing information has been received.">
+    <meta property="og:type" content="website">
+    <title>Express Hands | Submission Received</title>
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 901px)">
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/form-action.js"></script>
+</head>
+
+<body>
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="site-header">
+        <div class="header-container">
+            <a class="logo" href="index.html" aria-label="Express Hands home">
+                <span class="logo-icon" aria-hidden="true">EH</span>
+                <span class="logo-text">Express Hands</span>
+            </a>
+
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li><a class="nav-link" href="businesses.html">Businesses</a></li>
+                    <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li><a class="nav-link list-business" href="list-business.html">List Your Business</a></li>
+                </ul>
+            </nav>
+
+            <button class="notification-button" type="button" aria-label="Notifications">
+                <span aria-hidden="true">🔔</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main>
+        <section class="form-action-page">
+            <div class="section-container">
+                <div class="form-action-card">
+                    <p class="section-label">SUBMISSION RECEIVED</p>
+                    <h1>Thank You for Listing Your Business</h1>
+                    <p>Your business information has been received by Express Hands.</p>
+
+                    <div class="submission-details" id="submission-details">
+                        <!-- JavaScript displays submitted data here -->
+                    </div>
+
+                    <div class="form-action-buttons">
+                        <a class="primary-button" href="businesses.html">Browse Businesses</a>
+                        <a class="secondary-button" href="list-business.html">List Another Business</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="index.html">
+                    <span class="logo-icon" aria-hidden="true">EH</span>
+                    <span class="logo-text">Express Hands</span>
+                </a>
+                <p>Connecting you with trusted professionals and local businesses.</p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="businesses.html">Businesses</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>For Businesses</h2>
+                <ul>
+                    <li><a href="list-business.html">List Your Business</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
+            <p>WDD 231 Individual Website Project</p>
+        </div>
+    </footer>
+</body>
+</html>
