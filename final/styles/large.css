@@ -1,257 +1,216 @@
-/* ==========================================================
-   EXPRESS HANDS
-   WDD 231 Individual Website Project
-   LARGE SCREEN STYLES
-   Desktop / large screens: 901px+
-========================================================== */
+@media screen and (min-width: 901px) {
 
-/* ==========================================================
-   GLOBAL CONTAINERS
-========================================================== */
+    /* GLOBAL CONTAINERS */
+    .section-container,
+    .header-container,
+    .footer-container,
+    .hero-container {
+        width: min(92%, var(--max-width));
+    }
 
-.section-container,
-.header-container,
-.footer-container,
-.hero-container {
-    width: min(92%, var(--max-width));
-}
+    /* HEADER */
+    .header-container {
+        min-height: 78px;
+        gap: 1.5rem;
+    }
 
-/* ==========================================================
-   HEADER
-========================================================== */
+    .logo {
+        order: initial;
+        margin: 0;
+        font-size: 1.25rem;
+    }
 
-.header-container {
-    min-height: 78px;
-    gap: 1.5rem;
-}
+    .logo-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 0.9rem;
+    }
 
-.logo {
-    order: initial;
-    margin: 0;
-    font-size: 1.25rem;
-}
+    .primary-navigation {
+        position: static;
+        display: block;
+        margin-left: auto;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
 
-.logo-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 0.9rem;
-}
+    .primary-navigation ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.4rem;
+        padding: 0;
+    }
 
-.primary-navigation {
-    position: static;
-    display: block;
-    margin-left: auto;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
-}
+    .primary-navigation li {
+        width: auto;
+    }
 
-.primary-navigation ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.4rem;
-    padding: 0;
-}
+    .nav-link {
+        display: inline-block;
+        width: auto;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        text-align: left;
+    }
 
-.primary-navigation li {
-    width: auto;
-}
+    .nav-link.active::after {
+        display: block;
+    }
 
-.nav-link {
-    display: inline-block;
-    width: auto;
-    padding: 0.5rem 0;
-    font-size: 0.9rem;
-    text-align: left;
-}
+    .nav-link.list-business {
+        margin-top: 0;
+        padding: 0.7rem 1rem;
+    }
 
-.nav-link.active::after {
-    display: block;
-}
+    .menu-button {
+        display: none;
+    }
 
-.nav-link.list-business {
-    margin-top: 0;
-    padding: 0.7rem 1rem;
-}
+    /* HERO */
+    .hero {
+        min-height: 580px;
+    }
 
-.menu-button {
-    display: none;
-}
+    .hero-content {
+        padding: 5rem 0;
+    }
 
-/* ==========================================================
-   HERO
-========================================================== */
+    .hero h1 {
+        font-size: clamp(2.4rem, 6vw, 4.5rem);
+    }
 
-.hero {
-    min-height: 580px;
-}
+    .hero-description {
+        font-size: 1.1rem;
+    }
 
-.hero-content {
-    padding: 5rem 0;
-}
+    .hero-search {
+        grid-template-columns: 1.3fr 1fr auto;
+    }
 
-.hero h1 {
-    font-size: clamp(2.4rem, 6vw, 4.5rem);
-}
+    .search-button {
+        min-height: auto;
+    }
 
-.hero-description {
-    font-size: 1.1rem;
-}
+    /* GENERAL SECTIONS */
+    .section {
+        padding: 5rem 0;
+    }
 
-.hero-search {
-    grid-template-columns: 1.3fr 1fr auto;
-}
+    .section-heading {
+        margin-bottom: 3rem;
+    }
 
-.search-button {
-    min-height: auto;
-}
+    /* CATEGORIES */
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* ==========================================================
-   GENERAL SECTIONS
-========================================================== */
+    /* HOW IT WORKS */
+    .steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-.section {
-    padding: 5rem 0;
-}
+    /* FEATURED BUSINESSES */
+    .heading-with-link {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        max-width: none;
+        text-align: left;
+    }
 
-.section-heading {
-    margin-bottom: 3rem;
-}
+    .heading-with-link .section-heading {
+        margin: 0;
+    }
 
-/* ==========================================================
-   CATEGORIES
-========================================================== */
+    .heading-with-link .view-all-link {
+        display: inline-block;
+        margin-top: 0;
+    }
 
-.category-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* ==========================================================
-   HOW IT WORKS
-========================================================== */
+    /* ABOUT */
+    .about-container {
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 4rem;
+    }
 
-.steps {
-    grid-template-columns: repeat(4, 1fr);
-}
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
 
-/* ==========================================================
-   FEATURED BUSINESSES
-========================================================== */
+    .about-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-.heading-with-link {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    max-width: none;
-    text-align: left;
-}
+    .about-section {
+        padding: 5rem 0;
+    }
 
-.heading-with-link .section-heading {
-    margin: 0;
-}
+    /* HOMEPAGE CONTACT */
+    .contact-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-.heading-with-link .view-all-link {
-    display: inline-block;
-    margin-top: 0;
-}
+    /* CONTACT */
+    .contact-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 3rem;
+    }
 
-.featured-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .contact-information {
+        padding-top: 1rem;
+    }
 
-/* ==========================================================
-   ABOUT
-========================================================== */
+    .contact-section {
+        padding: 5rem 0;
+    }
 
-.about-container {
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 4rem;
-}
+    /* FORMS */
+    .form-card {
+        padding: 2rem;
+    }
 
-.about-highlight {
-    grid-template-columns: 1fr;
-}
+    /* LIST YOUR BUSINESS */
+    .list-business-header {
+        margin-bottom: 2.5rem;
+    }
 
-/* ==========================================================
-   HOMEPAGE CONTACT
-========================================================== */
+    .list-business-grid {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 3rem;
+    }
 
-.contact-content {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .list-business-section,
+    .list-business-page {
+        padding: 5rem 0;
+    }
 
-/* ==========================================================
-   ABOUT - PHASE 4
-========================================================== */
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 4rem;
+        padding: 4rem 0;
+    }
 
-.about-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .footer-brand {
+        grid-column: auto;
+    }
 
-.about-section,
-.contact-section,
-.list-business-section,
-.list-business-page {
-    padding: 5rem 0;
-}
+    .footer-links {
+        width: 100%;
+    }
 
-/* ==========================================================
-   CONTACT - PHASE 4
-========================================================== */
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
 
-.contact-grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 3rem;
-}
-
-.contact-information {
-    padding-top: 1rem;
-}
-
-/* ==========================================================
-   FORMS
-========================================================== */
-
-.form-card {
-    padding: 2rem;
-}
-
-/* ==========================================================
-   LIST YOUR BUSINESS
-========================================================== */
-
-.list-business-header {
-    margin-bottom: 2.5rem;
-}
-
-.list-business-grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    gap: 3rem;
-}
-
-
-/* ==========================================================
-   FOOTER
-========================================================== */
-
-.footer-container {
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 4rem;
-    padding: 4rem 0;
-}
-
-.footer-brand {
-    grid-column: auto;
-}
-
-.footer-links {
-    width: 100%;
-}
-
-.footer-bottom {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
 }

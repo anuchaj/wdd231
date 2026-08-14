@@ -1,171 +1,128 @@
-/* ==========================================================
-   EXPRESS HANDS
-   WDD 231 Individual Website Project
-   MEDIUM SCREEN STYLES
-   Tablet / medium screens: 601–900px
-========================================================== */
+@media screen and (min-width: 601px) and (max-width: 900px) {
 
-/* ==========================================================
-   GLOBAL CONTAINERS
-========================================================== */
+    /* GLOBAL CONTAINERS */
+    .section-container,
+    .header-container,
+    .footer-container,
+    .hero-container {
+        width: min(92%, var(--max-width));
+    }
 
-.section-container,
-.header-container,
-.footer-container,
-.hero-container {
-    width: min(92%, var(--max-width));
-}
+    /* HEADER */
+    .header-container {
+        min-height: 72px;
+        gap: 1rem;
+    }
 
-/* ==========================================================
-   HEADER
-========================================================== */
+    .logo {
+        font-size: 1.1rem;
+    }
 
-.header-container {
-    min-height: 72px;
-    gap: 1rem;
-}
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
 
-.logo {
-    font-size: 1.1rem;
-}
+    .primary-navigation {
+        top: 72px;
+    }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-}
+    /* HERO */
+    .hero-content {
+        padding: 4.5rem 0;
+    }
 
-.primary-navigation {
-    top: 72px;
-}
+    .hero h1 {
+        font-size: clamp(2.4rem, 7vw, 4rem);
+    }
 
-/* ==========================================================
-   HERO
-========================================================== */
+    .hero-description {
+        font-size: 1.05rem;
+    }
 
-.hero-content {
-    padding: 4.5rem 0;
-}
+    .hero-search {
+        grid-template-columns: 1.2fr 1fr auto;
+    }
 
-.hero h1 {
-    font-size: clamp(2.4rem, 7vw, 4rem);
-}
+    /* GENERAL SECTIONS */
+    .section {
+        padding: 4.5rem 0;
+    }
 
-.hero-description {
-    font-size: 1.05rem;
-}
+    .section-heading {
+        margin-bottom: 2.5rem;
+    }
 
-.hero-search {
-    grid-template-columns: 1.2fr 1fr auto;
-}
+    /* CATEGORIES */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-/* ==========================================================
-   GENERAL SECTIONS
-========================================================== */
+    /* HOW IT WORKS */
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.section {
-    padding: 4.5rem 0;
-}
+    /* FEATURED BUSINESSES */
+    .heading-with-link {
+        display: block;
+    }
 
-.section-heading {
-    margin-bottom: 2.5rem;
-}
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-/* ==========================================================
-   CATEGORIES
-========================================================== */
+    /* ABOUT */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-.category-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
+    .about-highlight {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* ==========================================================
-   HOW IT WORKS
-========================================================== */
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.steps {
-    grid-template-columns: repeat(2, 1fr);
-}
+    /* HOMEPAGE CONTACT */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
 
-/* ==========================================================
-   FEATURED BUSINESSES
-========================================================== */
+    /* CONTACT */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-.heading-with-link {
-    display: block;
-}
+    /* LIST YOUR BUSINESS */
+    .list-business-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-.featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2.5rem;
+        padding: 3.5rem 0;
+    }
 
-/* ==========================================================
-   ABOUT
-========================================================== */
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
 
-.about-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+    .footer-links {
+        width: 100%;
+    }
 
-.about-highlight {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
 
-/* ==========================================================
-   HOMEPAGE CONTACT
-========================================================== */
-
-.contact-content {
-    grid-template-columns: 1fr;
-}
-
-/* ==========================================================
-   ABOUT - PHASE 4
-========================================================== */
-
-.about-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* ==========================================================
-   CONTACT - PHASE 4
-========================================================== */
-
-.contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-/* ==========================================================
-   LIST YOUR BUSINESS
-========================================================== */
-
-.list-business-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-/* ==========================================================
-   FOOTER
-========================================================== */
-
-.footer-container {
-    grid-template-columns: 1.5fr 1fr;
-    gap: 2.5rem;
-    padding: 3.5rem 0;
-}
-
-.footer-brand {
-    grid-column: 1 / -1;
-}
-
-.footer-links {
-    width: 100%;
-}
-
-.footer-bottom {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
 }
