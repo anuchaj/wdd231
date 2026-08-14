@@ -143,10 +143,42 @@
                     <button class="reset-button" id="reset-filters" type="button">Reset Filters</button>
                 </div>
 
-                <!-- Business Cards -->
+                 <!-- Business Cards -->
                 <div class="business-grid" id="business-grid">
                     <!-- JavaScript inserts businesses here -->
                 </div>
+
+                <!-- Pagination -->
+                <nav
+                    class="pagination"
+                    id="pagination"
+                    aria-label="Business directory pages"
+                    hidden
+                >
+                    <button
+                        class="pagination-button"
+                        id="previous-page"
+                        type="button"
+                        aria-label="Go to previous page"
+                    >
+                        &laquo; Previous
+                    </button>
+
+                    <div
+                        class="pagination-numbers"
+                        id="pagination-numbers"
+                        aria-label="Page numbers"
+                    ></div>
+
+                    <button
+                        class="pagination-button"
+                        id="next-page"
+                        type="button"
+                        aria-label="Go to next page"
+                    >
+                        Next &raquo;
+                    </button>
+                </nav>
             </div>
         </section>
     </main>
