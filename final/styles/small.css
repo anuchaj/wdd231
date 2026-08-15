@@ -6,13 +6,13 @@
 /* COLOR VARIABLES */
 
 :root {
-    --primary: #0f4c81;
-    --secondary: #1fa971;
-    --accent: #f4b400;
+    --primary: #032441;
+    --secondary: #055233;
+    --accent: #e9ac05;
     --background: #f8fafc;
     --surface: #ffffff;
     --text: #2d3748;
-    --text-light: #64748b;
+    --text-light: #082957;
     --border: #dbe3ec;
     --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -468,7 +468,7 @@ h3 {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: #dbe6ef;
+    color: #044426;
     font-family: var(--heading-font);
     font-size: 1.5rem;
     font-weight: 700;
