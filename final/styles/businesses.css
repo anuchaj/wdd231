@@ -213,7 +213,7 @@
 }
 
 .rating-stars {
-    color: var(--accent);
+    color: var(--secondary);
     letter-spacing: 0.05em;
 }
 
