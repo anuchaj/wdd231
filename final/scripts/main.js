@@ -171,7 +171,6 @@ if (contactForm) {
 ========================================================== */
 
 const businessForm = document.querySelector("#business-form");
-const businessSuccess = document.querySelector("#business-success");
 
 if (businessForm) {
     businessForm.addEventListener("submit", (event) => {
@@ -194,8 +193,14 @@ if (businessForm) {
             submittedAt: new Date().toISOString()
         };
 
+        /*
+         * Save the submitted business information
+         * in localStorage for this frontend project.
+         */
         const existingListings = JSON.parse(
-            localStorage.getItem("expressHandsBusinessSubmissions")
+            localStorage.getItem(
+                "expressHandsBusinessSubmissions"
+            )
         ) || [];
 
         existingListings.push(businessSubmission);
@@ -205,11 +210,21 @@ if (businessForm) {
             JSON.stringify(existingListings)
         );
 
-        businessForm.reset();
-        businessSuccess.hidden = false;
+        /*
+         * Build the form-action URL.
+         * URLSearchParams safely encodes the submitted
+         * form values for the demonstration page.
+         */
+        const params = new URLSearchParams({
+            owner: businessSubmission.owner,
+            email: businessSubmission.email,
+            businessName: businessSubmission.businessName,
+            category: businessSubmission.category,
+            location: businessSubmission.location,
+            description: businessSubmission.description
+        });
 
-        setTimeout(() => {
-            businessSuccess.hidden = true;
-        }, 5000);
+        window.location.href =
+            `form-action.html?${params.toString()}`;
     });
 }

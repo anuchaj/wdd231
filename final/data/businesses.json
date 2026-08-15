@@ -7,6 +7,18 @@
         "state": "Abia",
         "rating": 4.8,
         "reviews": 126,
+        "reviewList": [
+            {
+                "name": "Sample Customer",
+                "rating": 5,
+                "comment": "Sample course-project review."
+            },
+            {
+                "name": "Another Customer",
+                "rating": 4,
+                "comment": "Sample course-project review."
+            }
+        ],
         "phone": "+234 800 000 0001",
         "email": "brightspark@example.com",
         "hours": "8:00 AM - 6:00 PM",
@@ -27,6 +39,18 @@
         "state": "Abia",
         "rating": 4.7,
         "reviews": 98,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0002",
         "email": "abaplumbing@example.com",
         "hours": "7:00 AM - 7:00 PM",
@@ -47,6 +71,18 @@
         "state": "Abia",
         "rating": 4.9,
         "reviews": 84,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0003",
         "email": "cooltech@example.com",
         "hours": "9:00 AM - 5:00 PM",
@@ -67,6 +103,18 @@
         "state": "Abia",
         "rating": 4.6,
         "reviews": 67,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0004",
         "email": "digitalbridge@example.com",
         "hours": "8:00 AM - 5:30 PM",
@@ -87,6 +135,18 @@
         "state": "Abia",
         "rating": 4.8,
         "reviews": 73,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0005",
         "email": "probiz@example.com",
         "hours": "9:00 AM - 5:00 PM",
@@ -107,6 +167,18 @@
         "state": "Abia",
         "rating": 4.5,
         "reviews": 52,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0006",
         "email": "creativeedge@example.com",
         "hours": "9:00 AM - 6:00 PM",
@@ -127,6 +199,18 @@
         "state": "Abia",
         "rating": 4.9,
         "reviews": 145,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0007",
         "email": "wellnessfirst@example.com",
         "hours": "8:00 AM - 8:00 PM",
@@ -147,6 +231,18 @@
         "state": "Abia",
         "rating": 4.6,
         "reviews": 91,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0008",
         "email": "healthyliving@example.com",
         "hours": "8:00 AM - 9:00 PM",
@@ -167,6 +263,18 @@
         "state": "Abia",
         "rating": 4.8,
         "reviews": 119,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0009",
         "email": "autocare@example.com",
         "hours": "8:00 AM - 6:00 PM",
@@ -187,6 +295,18 @@
         "state": "Imo",
         "rating": 4.5,
         "reviews": 76,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0010",
         "email": "reliablemotors@example.com",
         "hours": "7:30 AM - 6:00 PM",
@@ -207,6 +327,18 @@
         "state": "Abia",
         "rating": 4.9,
         "reviews": 63,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0011",
         "email": "excellearning@example.com",
         "hours": "8:00 AM - 5:00 PM",
@@ -227,6 +359,18 @@
         "state": "Abia",
         "rating": 4.7,
         "reviews": 48,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0012",
         "email": "smartstart@example.com",
         "hours": "9:00 AM - 6:00 PM",
@@ -247,6 +391,18 @@
         "state": "Abia",
         "rating": 4.8,
         "reviews": 87,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0013",
         "email": "perfectmoments@example.com",
         "hours": "9:00 AM - 6:00 PM",
@@ -267,6 +423,18 @@
         "state": "Rivers",
         "rating": 4.6,
         "reviews": 58,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0014",
         "email": "elegantevents@example.com",
         "hours": "9:00 AM - 5:30 PM",
@@ -287,6 +455,18 @@
         "state": "Imo",
         "rating": 4.7,
         "reviews": 105,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0015",
         "email": "cleanpro@example.com",
         "hours": "7:00 AM - 7:00 PM",
@@ -307,6 +487,18 @@
         "state": "Rivers",
         "rating": 4.5,
         "reviews": 61,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0016",
         "email": "freshfix@example.com",
         "hours": "8:00 AM - 6:00 PM",
@@ -327,6 +519,18 @@
         "state": "Rivers",
         "rating": 4.8,
         "reviews": 72,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0017",
         "email": "securenet@example.com",
         "hours": "8:00 AM - 6:00 PM",
@@ -347,6 +551,18 @@
         "state": "Enugu",
         "rating": 4.9,
         "reviews": 132,
+        "reviewList": [
+            {
+                "name": "Demo Customer",
+                "rating": 5,
+                "comment": "Sample customer feedback for the Express Hands course project."
+            },
+            {
+                "name": "Demo Reviewer",
+                "rating": 4,
+                "comment": "Sample review content demonstrating the business profile feature."
+            }
+        ],
         "phone": "+234 800 000 0018",
         "email": "primeauto@example.com",
         "hours": "8:00 AM - 6:30 PM",

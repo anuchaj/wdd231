@@ -338,6 +338,85 @@
     background-color: var(--secondary);
 }
 
+
+/* ==========================================================
+   PAGINATION
+========================================================== */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.pagination-button,
+.pagination-number {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--surface);
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled),
+.pagination-button:focus-visible,
+.pagination-number:hover,
+.pagination-number:focus-visible {
+    border-color: var(--primary);
+    background-color: #eef5fa;
+}
+
+.pagination-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.pagination-number.active {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+@media (max-width: 500px) {
+    .pagination {
+        gap: 0.35rem;
+    }
+
+    .pagination-button,
+    .pagination-number {
+        min-width: 38px;
+        min-height: 38px;
+        padding: 0.4rem 0.55rem;
+        font-size: 0.78rem;
+    }
+
+    .pagination-button {
+        font-size: 0.75rem;
+    }
+}
+
+
 /* ==========================================================
    TABLET
 ========================================================== */

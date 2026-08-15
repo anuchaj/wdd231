@@ -1030,8 +1030,86 @@ h3 {
     font-size: 0.9rem;
 }
 
-/* FOOTER */
+/* ==========================================================
+   FORM ACTION PAGE
+========================================================== */
 
+.form-action-page {
+    padding: 3rem 1rem;
+}
+
+.form-action-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.form-action-card h1 {
+    margin-bottom: 0.75rem;
+}
+
+.form-action-card > p:not(.section-label) {
+    margin-bottom: 2rem;
+}
+
+.submission-details {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.submission-item {
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+    background-color: #f8fafc;
+}
+
+.submission-item h2 {
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+.submission-item p {
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+.submission-empty {
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #f8fafc;
+}
+
+.form-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    background-color: #eef5fa;
+}
+
+
+/* FOOTER */
 .site-footer {
     background-color: #0b395f;
     color: #ffffff;

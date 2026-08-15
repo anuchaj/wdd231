@@ -1,11 +1,8 @@
-/* ==========================================================
-   EXPRESS HANDS
-   Business Directory
-========================================================== */
+// EXPRESS HANDS - Business Directory
 
 import { getBusinesses } from "./modules/data.js";
 
-//ELEMENTS
+// ELEMENTS
 const businessGrid = document.querySelector("#business-grid");
 const loadingMessage = document.querySelector("#loading-message");
 const errorMessage = document.querySelector("#error-message");
@@ -18,19 +15,25 @@ const ratingFilter = document.querySelector("#rating-filter");
 const sortFilter = document.querySelector("#sort-filter");
 const resetButton = document.querySelector("#reset-filters");
 
-//APPLICATION STATE
-let allBusinesses = [];
+// PAGINATION
+const pagination = document.querySelector("#pagination");
+const previousPageButton = document.querySelector("#previous-page");
+const nextPageButton = document.querySelector("#next-page");
+const paginationNumbers = document.querySelector("#pagination-numbers");
 
-//INITIALIZE
+// APPLICATION STATE
+let allBusinesses = [];
+let currentPage = 1;
+const businessesPerPage = 6;
+
+// INITIALIZE
 async function initializeDirectory() {
     try {
         showLoading();
-
         allBusinesses = await getBusinesses();
-
         populateFilters(allBusinesses);
         applyURLParameters();
-        renderBusinesses(allBusinesses);
+        updateDirectory();
         hideLoading();
     } catch (error) {
         console.error("Unable to initialize business directory:", error);
@@ -38,11 +41,12 @@ async function initializeDirectory() {
     }
 }
 
-//LOADING STATE
+// LOADING STATE
 function showLoading() {
     loadingMessage.hidden = false;
     errorMessage.hidden = true;
     noResults.hidden = true;
+    pagination.hidden = true;
     businessGrid.innerHTML = "";
 }
 
@@ -50,40 +54,42 @@ function hideLoading() {
     loadingMessage.hidden = true;
 }
 
-//ERROR STATE
+// ERROR STATE
 function showError() {
     loadingMessage.hidden = true;
     errorMessage.hidden = false;
     noResults.hidden = true;
+    pagination.hidden = true;
     businessGrid.innerHTML = "";
     resultsCount.textContent = "0";
 }
 
-//POPULATE FILTERS
+// POPULATE FILTERS
 function populateFilters(businesses) {
-    const categories = [...new Set(businesses.map((business) => business.category))].sort();
-    const locations = [...new Set(businesses.map((business) => business.location))].sort();
+    const categories = [
+        ...new Set(businesses.map((business) => business.category))
+    ].sort();
+
+    const locations = [
+        ...new Set(businesses.map((business) => business.location))
+    ].sort();
 
     categories.forEach((category) => {
         const option = document.createElement("option");
-
         option.value = category;
         option.textContent = category;
-
         categoryFilter.appendChild(option);
     });
 
     locations.forEach((location) => {
         const option = document.createElement("option");
-
         option.value = location;
         option.textContent = location;
-
         locationFilter.appendChild(option);
     });
 }
 
-//URL PARAMETERS
+// URL PARAMETERS
 function applyURLParameters() {
     const params = new URLSearchParams(window.location.search);
     const search = params.get("search");
@@ -115,7 +121,7 @@ function applyURLParameters() {
     }
 }
 
-//FILTER BUSINESSES
+// FILTER BUSINESSES
 function getFilteredBusinesses() {
     const searchTerm = searchInput.value.trim().toLowerCase();
     const category = categoryFilter.value;
@@ -131,16 +137,28 @@ function getFilteredBusinesses() {
             ...business.services
         ].join(" ").toLowerCase();
 
-        const matchesSearch = !searchTerm || searchableText.includes(searchTerm);
-        const matchesCategory = category === "all" || business.category === category;
-        const matchesLocation = location === "all" || business.location === location;
-        const matchesRating = business.rating >= minimumRating;
+        const matchesSearch =
+            !searchTerm || searchableText.includes(searchTerm);
 
-        return matchesSearch && matchesCategory && matchesLocation && matchesRating;
+        const matchesCategory =
+            category === "all" || business.category === category;
+
+        const matchesLocation =
+            location === "all" || business.location === location;
+
+        const matchesRating =
+            business.rating >= minimumRating;
+
+        return (
+            matchesSearch &&
+            matchesCategory &&
+            matchesLocation &&
+            matchesRating
+        );
     });
 }
 
-//SORT BUSINESSES
+// SORT BUSINESSES
 function sortBusinesses(businesses) {
     const sortOption = sortFilter.value;
     const sorted = [...businesses];
@@ -156,27 +174,118 @@ function sortBusinesses(businesses) {
     return sorted;
 }
 
-//RENDER BUSINESSES
+// UPDATE DIRECTORY
+function updateDirectory() {
+    const filtered = getFilteredBusinesses();
+    const sorted = sortBusinesses(filtered);
+    const totalPages = Math.ceil(sorted.length / businessesPerPage);
+
+    // Return to the last valid page when filtering reduces the page count.
+    if (totalPages > 0 && currentPage > totalPages) {
+        currentPage = totalPages;
+    }
+
+    if (sorted.length === 0) {
+        currentPage = 1;
+    }
+
+    renderBusinesses(sorted);
+    renderPagination(sorted.length);
+}
+
+// RENDER BUSINESSES
 function renderBusinesses(businesses) {
-    const filtered = sortBusinesses(businesses);
-
     businessGrid.innerHTML = "";
-    resultsCount.textContent = filtered.length;
+    resultsCount.textContent = businesses.length;
 
-    if (filtered.length === 0) {
+    if (businesses.length === 0) {
         noResults.hidden = false;
+        pagination.hidden = true;
         return;
     }
 
     noResults.hidden = true;
 
-    filtered.forEach((business) => {
+    const startIndex = (currentPage - 1) * businessesPerPage;
+    const endIndex = startIndex + businessesPerPage;
+    const pageBusinesses = businesses.slice(startIndex, endIndex);
+
+    pageBusinesses.forEach((business) => {
         const card = createBusinessCard(business);
         businessGrid.appendChild(card);
     });
 }
 
-//CREATE BUSINESS CARD
+// PAGINATION
+function renderPagination(totalBusinesses) {
+    const totalPages = Math.ceil(totalBusinesses / businessesPerPage);
+
+    paginationNumbers.innerHTML = "";
+
+    if (totalBusinesses === 0 || totalPages <= 1) {
+        pagination.hidden = true;
+        return;
+    }
+
+    pagination.hidden = false;
+    previousPageButton.disabled = currentPage === 1;
+    nextPageButton.disabled = currentPage === totalPages;
+
+    for (let page = 1; page <= totalPages; page++) {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "pagination-number";
+        button.textContent = page;
+        button.setAttribute("aria-label", `Go to page ${page}`);
+
+        if (page === currentPage) {
+            button.classList.add("active");
+            button.setAttribute("aria-current", "page");
+        }
+
+        button.addEventListener("click", () => {
+            currentPage = page;
+            updateDirectory();
+            scrollToResults();
+        });
+
+        paginationNumbers.appendChild(button);
+    }
+}
+
+// PAGINATION NAVIGATION
+previousPageButton.addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        updateDirectory();
+        scrollToResults();
+    }
+});
+
+nextPageButton.addEventListener("click", () => {
+    const filtered = getFilteredBusinesses();
+    const totalPages = Math.ceil(filtered.length / businessesPerPage);
+
+    if (currentPage < totalPages) {
+        currentPage++;
+        updateDirectory();
+        scrollToResults();
+    }
+});
+
+function scrollToResults() {
+    const directory = document.querySelector(".directory");
+
+    if (directory) {
+        directory.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
+
+// CREATE BUSINESS CARD
 function createBusinessCard(business) {
     const article = document.createElement("article");
     article.className = "business-card";
@@ -237,7 +346,8 @@ function createBusinessCard(business) {
 
     const location = document.createElement("p");
     location.className = "business-location";
-    location.innerHTML = `<span aria-hidden="true">📍</span><span>${business.location}, ${business.state}</span>`;
+    location.innerHTML =
+        `<span aria-hidden="true">📍</span><span>${business.location}, ${business.state}</span>`;
 
     const description = document.createElement("p");
     description.className = "business-description";
@@ -248,10 +358,8 @@ function createBusinessCard(business) {
 
     business.services.slice(0, 3).forEach((service) => {
         const tag = document.createElement("span");
-
         tag.className = "service-tag";
         tag.textContent = service;
-
         services.appendChild(tag);
     });
 
@@ -264,7 +372,8 @@ function createBusinessCard(business) {
 
     const viewLink = document.createElement("a");
     viewLink.className = "view-business";
-    viewLink.href = `business.html?id=${encodeURIComponent(business.id)}`;
+    viewLink.href =
+        `business.html?id=${encodeURIComponent(business.id)}`;
     viewLink.textContent = "View Profile";
 
     footer.appendChild(hours);
@@ -284,36 +393,52 @@ function createBusinessCard(business) {
     return article;
 }
 
-//STAR DISPLAY
+// STAR DISPLAY
 function getStars(rating) {
     const roundedRating = Math.round(rating);
 
-    return "★".repeat(roundedRating) + "☆".repeat(5 - roundedRating);
+    return (
+        "★".repeat(roundedRating) +
+        "☆".repeat(5 - roundedRating)
+    );
 }
 
-//FILTER EVENT LISTENERS
-searchInput.addEventListener("input", updateDirectory);
-categoryFilter.addEventListener("change", updateDirectory);
-locationFilter.addEventListener("change", updateDirectory);
-ratingFilter.addEventListener("change", updateDirectory);
-sortFilter.addEventListener("change", updateDirectory);
+// FILTER EVENT LISTENERS
+searchInput.addEventListener("input", () => {
+    currentPage = 1;
+    updateDirectory();
+});
 
-//UPDATE DIRECTORY
-function updateDirectory() {
-    const filtered = getFilteredBusinesses();
-    renderBusinesses(filtered);
-}
+categoryFilter.addEventListener("change", () => {
+    currentPage = 1;
+    updateDirectory();
+});
 
-//RESET FILTERS
+locationFilter.addEventListener("change", () => {
+    currentPage = 1;
+    updateDirectory();
+});
+
+ratingFilter.addEventListener("change", () => {
+    currentPage = 1;
+    updateDirectory();
+});
+
+sortFilter.addEventListener("change", () => {
+    currentPage = 1;
+    updateDirectory();
+});
+
+// RESET FILTERS
 resetButton.addEventListener("click", () => {
     searchInput.value = "";
     categoryFilter.value = "all";
     locationFilter.value = "all";
     ratingFilter.value = "0";
     sortFilter.value = "default";
-
+    currentPage = 1;
     updateDirectory();
 });
 
-//START APPLICATION
+// START APPLICATION
 initializeDirectory();

@@ -1,15 +1,8 @@
-/* ==========================================================
-   EXPRESS HANDS
-   Business Profile
-========================================================== */
+// EXPRESS HANDS - Business Profile
 
 import { getBusinesses } from "./modules/data.js";
 
-
-/* ==========================================================
-   ELEMENTS
-========================================================== */
-
+// ELEMENTS
 const loadingMessage = document.querySelector("#loading-message");
 const errorMessage = document.querySelector("#error-message");
 const businessProfile = document.querySelector("#business-profile");
@@ -29,148 +22,77 @@ const sidebarLocation = document.querySelector("#sidebar-location");
 const saveButton = document.querySelector("#save-button");
 const saveButtonText = document.querySelector("#save-button-text");
 const contactButton = document.querySelector("#contact-button");
+const contactDialog = document.querySelector("#contact-dialog");
+const closeDialog = document.querySelector("#close-dialog");
+const cancelDialog = document.querySelector("#cancel-dialog");
+const contactForm = document.querySelector("#contact-form");
+const dialogBusinessName = document.querySelector("#dialog-business-name");
+const businessReviews = document.querySelector("#business-reviews");
+const reviewsSummaryRating = document.querySelector("#reviews-summary-rating");
+const reviewsSummaryCount = document.querySelector("#reviews-summary-count");
 
-const contactDialog =
-    document.querySelector("#contact-dialog");
-
-const closeDialog =
-    document.querySelector("#close-dialog");
-
-const cancelDialog =
-    document.querySelector("#cancel-dialog");
-
-const contactForm =
-    document.querySelector("#contact-form");
-
-const dialogBusinessName =
-    document.querySelector("#dialog-business-name");
-
-
-/* ==========================================================
-   STATE
-========================================================== */
+// STATE
 let currentBusiness = null;
 
-
-/* ==========================================================
-   GET BUSINESS ID
-========================================================== */
+// GET BUSINESS ID
 function getBusinessId() {
-
-    const params = new URLSearchParams(
-        window.location.search
-    );
-
+    const params = new URLSearchParams(window.location.search);
     return params.get("id");
 }
 
-
-/* ==========================================================
-   INITIALIZE
-========================================================== */
+// INITIALIZE
 async function initializeProfile() {
-
     const businessId = getBusinessId();
 
-
     if (!businessId) {
-
         showError();
-
         return;
     }
 
-
     try {
-
         const businesses = await getBusinesses();
 
-
         currentBusiness = businesses.find(
-            (business) =>
-                business.id === businessId
+            (business) => business.id === businessId
         );
 
-
         if (!currentBusiness) {
-
             showError();
-
             return;
         }
 
-
         renderBusiness(currentBusiness);
-
         initializeSaveButton(currentBusiness);
-
         hideLoading();
-
     } catch (error) {
-
-        console.error(
-            "Unable to load business profile:",
-            error
-        );
-
+        console.error("Unable to load business profile:", error);
         showError();
     }
 }
 
-
-/* ==========================================================
-   RENDER BUSINESS
-========================================================== */
-
+// RENDER BUSINESS
 function renderBusiness(business) {
-
     businessProfile.hidden = false;
 
+    // Page title
+    document.title = `${business.name} | Express Hands`;
 
-    /* Page title */
+    // Image
+    businessImage.src = business.image;
+    businessImage.alt = `${business.name} business`;
 
-    document.title =
-        `${business.name} | Express Hands`;
+    // Basic information
+    businessName.textContent = business.name;
+    breadcrumbName.textContent = business.name;
+    businessCategory.textContent = business.category;
 
-
-    /* Image */
-
-    businessImage.src =
-        business.image;
-
-    businessImage.alt =
-        `${business.name} business`;
-
-
-    /* Basic information */
-
-    businessName.textContent =
-        business.name;
-
-    breadcrumbName.textContent =
-        business.name;
-
-    businessCategory.textContent =
-        business.category;
-
-
-    /* Rating */
-
+    // Rating
     businessRating.innerHTML = `
-        <span
-            class="rating-stars"
-            aria-hidden="true"
-        >
+        <span class="rating-stars" aria-hidden="true">
             ${getStars(business.rating)}
         </span>
-
-        <span class="rating-value">
-            ${business.rating}
-        </span>
-
-        <span class="review-count">
-            (${business.reviews} reviews)
-        </span>
+        <span class="rating-value">${business.rating}</span>
+        <span class="review-count">(${business.reviews} reviews)</span>
     `;
 
     businessRating.setAttribute(
@@ -178,100 +100,105 @@ function renderBusiness(business) {
         `${business.rating} out of 5 stars from ${business.reviews} reviews`
     );
 
+    // Location
+    const fullLocation = `${business.location}, ${business.state}`;
 
-    /* Location */
+    businessLocation.textContent = `📍 ${fullLocation}`;
+    sidebarLocation.textContent = fullLocation;
 
-    const fullLocation =
-        `${business.location}, ${business.state}`;
+    // Description
+    businessDescription.textContent = business.description;
 
-    businessLocation.textContent =
-        `📍 ${fullLocation}`;
-
-    sidebarLocation.textContent =
-        fullLocation;
-
-
-    /* Description */
-
-    businessDescription.textContent =
-        business.description;
-
-
-    /* Services */
-
+    // Services
     businessServices.innerHTML = "";
 
-    business.services.forEach(
-        (service) => {
+    business.services.forEach((service) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = service;
+        businessServices.appendChild(listItem);
+    });
 
-            const listItem =
-                document.createElement("li");
+    // Hours
+    businessHours.textContent = business.hours;
+    businessStatus.textContent = business.status;
 
-            listItem.textContent =
-                service;
-
-            businessServices.appendChild(
-                listItem
-            );
-        }
-    );
-
-
-    /* Hours */
-
-    businessHours.textContent =
-        business.hours;
-
-    businessStatus.textContent =
-        business.status;
-
-
-    if (
-        business.status.toLowerCase() !==
-        "open"
-    ) {
-
-        businessStatus.classList.add(
-            "closed"
-        );
+    if (business.status.toLowerCase() !== "open") {
+        businessStatus.classList.add("closed");
     }
 
+    // Phone
+    businessPhone.textContent = business.phone;
+    businessPhone.href = `tel:${cleanPhoneNumber(business.phone)}`;
 
-    /* Phone */
+    // Email
+    businessEmail.textContent = business.email;
+    businessEmail.href = `mailto:${business.email}`;
 
-    businessPhone.textContent =
-        business.phone;
-
-    businessPhone.href =
-        `tel:${cleanPhoneNumber(
-            business.phone
-        )}`;
-
-
-    /* Email */
-
-    businessEmail.textContent =
-        business.email;
-
-    businessEmail.href =
-        `mailto:${business.email}`;
-
-
-    /* Dialog */
-
-    dialogBusinessName.textContent =
-        business.name;
+    // Dialog
+    dialogBusinessName.textContent = business.name;
+    
 }
 
+// RENDER REVIEWS
+function renderReviews(business) {
+    businessReviews.innerHTML = "";
 
-/* ==========================================================
-   STAR DISPLAY
-========================================================== */
+    const reviews = Array.isArray(business.reviewList)
+        ? business.reviewList
+        : [];
 
+    reviewsSummaryRating.textContent = `${business.rating} / 5`;
+    reviewsSummaryCount.textContent = `${business.reviews} reviews`;
+
+    if (reviews.length === 0) {
+        const emptyMessage = document.createElement("p");
+
+        emptyMessage.className = "reviews-empty";
+        emptyMessage.textContent =
+            "No individual review details are available yet.";
+
+        businessReviews.appendChild(emptyMessage);
+        return;
+    }
+
+    reviews.forEach((review) => {
+        const article = document.createElement("article");
+        article.className = "review-card";
+
+        const header = document.createElement("div");
+        header.className = "review-card-header";
+
+        const reviewer = document.createElement("h3");
+        reviewer.textContent = review.name;
+
+        const rating = document.createElement("div");
+        rating.className = "review-rating";
+        rating.setAttribute(
+            "aria-label",
+            `${review.rating} out of 5 stars`
+        );
+
+        const stars = document.createElement("span");
+        stars.setAttribute("aria-hidden", "true");
+        stars.textContent = getStars(review.rating);
+
+        rating.appendChild(stars);
+        header.appendChild(reviewer);
+        header.appendChild(rating);
+
+        const comment = document.createElement("p");
+        comment.className = "review-comment";
+        comment.textContent = review.comment;
+
+        article.appendChild(header);
+        article.appendChild(comment);
+        businessReviews.appendChild(article);
+    });
+}
+
+// STAR DISPLAY
 function getStars(rating) {
-
-    const roundedRating =
-        Math.round(rating);
+    const roundedRating = Math.round(rating);
 
     return (
         "★".repeat(roundedRating) +
@@ -279,308 +206,138 @@ function getStars(rating) {
     );
 }
 
-
-/* ==========================================================
-   PHONE CLEANUP
-========================================================== */
-
+// PHONE CLEANUP
 function cleanPhoneNumber(phone) {
-
-    return phone.replace(
-        /[^\d+]/g,
-        ""
-    );
+    return phone.replace(/[^\d+]/g, "");
 }
 
-
-/* ==========================================================
-   SAVE BUSINESS
-========================================================== */
-
+// SAVE BUSINESS
 function getSavedBusinesses() {
-
     try {
-
-        const saved =
-            localStorage.getItem(
-                "expressHandsSavedBusinesses"
-            );
-
-        return saved
-            ? JSON.parse(saved)
-            : [];
-
-    } catch (error) {
-
-        console.error(
-            "Unable to read saved businesses:",
-            error
+        const saved = localStorage.getItem(
+            "expressHandsSavedBusinesses"
         );
 
+        return saved ? JSON.parse(saved) : [];
+    } catch (error) {
+        console.error("Unable to read saved businesses:", error);
         return [];
     }
 }
 
-
 function saveBusinesses(businesses) {
-
     try {
-
         localStorage.setItem(
             "expressHandsSavedBusinesses",
             JSON.stringify(businesses)
         );
-
     } catch (error) {
-
-        console.error(
-            "Unable to save business:",
-            error
-        );
+        console.error("Unable to save business:", error);
     }
 }
 
-
 function initializeSaveButton(business) {
-
     updateSaveButton(
-        getSavedBusinesses().includes(
-            business.id
-        )
+        getSavedBusinesses().includes(business.id)
     );
 }
 
-
 function toggleSavedBusiness() {
-
     if (!currentBusiness) {
         return;
     }
 
-
-    const savedBusinesses =
-        getSavedBusinesses();
-
-
-    const existingIndex =
-        savedBusinesses.indexOf(
-            currentBusiness.id
-        );
-
+    const savedBusinesses = getSavedBusinesses();
+    const existingIndex = savedBusinesses.indexOf(currentBusiness.id);
 
     if (existingIndex === -1) {
-
-        savedBusinesses.push(
-            currentBusiness.id
-        );
-
-        saveBusinesses(
-            savedBusinesses
-        );
-
+        savedBusinesses.push(currentBusiness.id);
+        saveBusinesses(savedBusinesses);
         updateSaveButton(true);
-
     } else {
-
-        savedBusinesses.splice(
-            existingIndex,
-            1
-        );
-
-        saveBusinesses(
-            savedBusinesses
-        );
-
+        savedBusinesses.splice(existingIndex, 1);
+        saveBusinesses(savedBusinesses);
         updateSaveButton(false);
     }
 }
 
-
 function updateSaveButton(isSaved) {
-
-    saveButton.setAttribute(
-        "aria-pressed",
-        String(isSaved)
-    );
-
+    saveButton.setAttribute("aria-pressed", String(isSaved));
 
     if (isSaved) {
-
-        saveButtonText.textContent =
-            "Saved";
-
-        saveButton.querySelector(
-            "span:first-child"
-        ).textContent = "♥";
-
+        saveButtonText.textContent = "Saved";
+        saveButton.querySelector("span:first-child").textContent = "♥";
     } else {
-
-        saveButtonText.textContent =
-            "Save Business";
-
-        saveButton.querySelector(
-            "span:first-child"
-        ).textContent = "♡";
+        saveButtonText.textContent = "Save Business";
+        saveButton.querySelector("span:first-child").textContent = "♡";
     }
 }
 
-
-/* ==========================================================
-   CONTACT DIALOG
-========================================================== */
-
+// CONTACT DIALOG
 function openContactDialog() {
-
-    if (
-        typeof contactDialog.showModal ===
-        "function"
-    ) {
-
+    if (typeof contactDialog.showModal === "function") {
         contactDialog.showModal();
-
     } else {
-
-        contactDialog.setAttribute(
-            "open",
-            ""
-        );
+        contactDialog.setAttribute("open", "");
     }
 }
-
 
 function closeContactDialog() {
-
-    if (
-        typeof contactDialog.close ===
-        "function"
-    ) {
-
+    if (typeof contactDialog.close === "function") {
         contactDialog.close();
-
     } else {
-
-        contactDialog.removeAttribute(
-            "open"
-        );
+        contactDialog.removeAttribute("open");
     }
 }
 
-
-/* ==========================================================
-   CONTACT FORM
-========================================================== */
-
+// CONTACT FORM
 function handleContactSubmit(event) {
-
     event.preventDefault();
 
+    const formData = new FormData(contactForm);
+    const name = formData.get("name");
 
-    const formData =
-        new FormData(
-            contactForm
-        );
-
-
-    const name =
-        formData.get("name");
-
-
-    /*
-       This project is frontend-only.
-
-       I'm not actually sending email or
-       storing messages on a server yet.
-
-       I only demonstrate successful form
-       interaction for the course project.
-    */
+    // This project is frontend-only and does not send or store messages on a server.
 
     closeContactDialog();
-
     contactForm.reset();
-
 
     alert(
         `Thank you, ${name}. Your message has been prepared for ${currentBusiness.name}.`
     );
 }
 
+// EVENT LISTENERS
+saveButton.addEventListener("click", toggleSavedBusiness);
+contactButton.addEventListener("click", openContactDialog);
+closeDialog.addEventListener("click", closeContactDialog);
+cancelDialog.addEventListener("click", closeContactDialog);
+contactForm.addEventListener("submit", handleContactSubmit);
 
-/* ==========================================================
-   EVENT LISTENERS
-========================================================== */
+// CLOSE DIALOG WHEN CLICKING OUTSIDE
+contactDialog.addEventListener("click", (event) => {
+    const rect = contactDialog.getBoundingClientRect();
 
-saveButton.addEventListener(
-    "click",
-    toggleSavedBusiness
-);
+    const clickedInside =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
 
-
-contactButton.addEventListener(
-    "click",
-    openContactDialog
-);
-
-
-closeDialog.addEventListener(
-    "click",
-    closeContactDialog
-);
-
-
-cancelDialog.addEventListener(
-    "click",
-    closeContactDialog
-);
-
-
-contactForm.addEventListener(
-    "submit",
-    handleContactSubmit
-);
-
-
-/* ==========================================================
-   CLOSE DIALOG WHEN CLICKING OUTSIDE
-========================================================== */
-
-contactDialog.addEventListener(
-    "click",
-    (event) => {
-
-        const rect =
-            contactDialog.getBoundingClientRect();
-
-
-        const clickedInside =
-            event.clientX >= rect.left &&
-            event.clientX <= rect.right &&
-            event.clientY >= rect.top &&
-            event.clientY <= rect.bottom;
-
-
-        if (!clickedInside) {
-
-            closeContactDialog();
-        }
+    if (!clickedInside) {
+        closeContactDialog();
     }
-);
+});
 
-
-/* ==========================================================
-   INITIALIZE
-========================================================== */
-
+// INITIALIZE
 function hideLoading() {
     loadingMessage.hidden = true;
 }
-
 
 function showError() {
     loadingMessage.hidden = true;
     errorMessage.hidden = false;
     businessProfile.hidden = true;
 }
-
 
 initializeProfile();
