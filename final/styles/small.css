@@ -116,9 +116,9 @@ h3 {
     height: 38px;
     display: grid;
     place-items: center;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     color: #ffffff;
-    border-radius: 9px;
+    border-radius:6px;
     font-size: 0.85rem;
     font-weight: 700;
 }
@@ -1128,7 +1128,7 @@ h3 {
 }
 
 .footer-logo .logo-icon {
-    background-color: var(--secondary);
+    background-color: #ffffff;
 }
 
 .footer-brand > p {
