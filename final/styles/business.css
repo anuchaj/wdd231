@@ -1,11 +1,6 @@
-/* ==========================================================
-   EXPRESS HANDS
-   Business Profile Styles
-========================================================== */
+/* EXPRESS HANDS Business Profile Styles */
 
-/* ==========================================================
-   STATUS
-========================================================== */
+/* STATUS */
 .profile-status {
     padding: 5rem 0;
     text-align: center;
@@ -24,19 +19,13 @@
     margin-bottom: 1.5rem;
 }
 
-/* ==========================================================
-   BUSINESS PROFILE
-========================================================== */
-
+/* BUSINESS PROFILE */
 .business-profile {
     padding: 2rem 0 5rem;
     background-color: var(--background);
 }
 
-/* ==========================================================
-   BREADCRUMB
-========================================================== */
-
+/* BREADCRUMB */
 .breadcrumb {
     display: flex;
     align-items: center;
@@ -56,10 +45,7 @@
     text-decoration: underline;
 }
 
-/* ==========================================================
-   PROFILE HEADER
-========================================================== */
-
+/* PROFILE HEADER */
 .profile-header {
     display: grid;
     grid-template-columns: minmax(280px, 420px) 1fr;
@@ -132,10 +118,7 @@
     color: var(--text-light);
 }
 
-/* ==========================================================
-   ACTIONS
-========================================================== */
-
+/* ACTIONS */
 .profile-actions {
     display: flex;
     flex-wrap: wrap;
@@ -181,10 +164,7 @@
     color: #ffffff;
 }
 
-/* ==========================================================
-   PROFILE CONTENT
-========================================================== */
-
+/* PROFILE CONTENT */
 .profile-content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 330px;
@@ -192,10 +172,7 @@
     margin-top: 2rem;
 }
 
-/* ==========================================================
-   PROFILE MAIN
-========================================================== */
-
+/* PROFILE MAIN */
 .profile-main {
     background-color: var(--surface);
     border: 1px solid var(--border);
@@ -221,10 +198,7 @@
     color: var(--text-light);
 }
 
-/* ==========================================================
-   SERVICES
-========================================================== */
-
+/* SERVICES */
 .profile-services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -243,10 +217,7 @@
     font-weight: 600;
 }
 
-/* ==========================================================
-   HOURS
-========================================================== */
-
+/* HOURS */
 .business-hours {
     display: inline-block;
     margin-right: 0.75rem;
@@ -269,10 +240,7 @@
     color: #475569;
 }
 
-/* ==========================================================
-   SIDEBAR
-========================================================== */
-
+/* SIDEBAR */
 .profile-sidebar {
     display: flex;
     flex-direction: column;
@@ -295,10 +263,7 @@
     font-size: 1.15rem;
 }
 
-/* ==========================================================
-   CONTACT ITEMS
-========================================================== */
-
+/* CONTACT ITEMS */
 .contact-item {
     display: grid;
     grid-template-columns: 30px 1fr;
@@ -338,10 +303,7 @@
     text-transform: uppercase;
 }
 
-/* ==========================================================
-   HELP CARD
-========================================================== */
-
+/* HELP CARD */
 .help-card {
     background-color: var(--primary);
 }
@@ -367,10 +329,7 @@
     color: var(--primary);
 }
 
-/* ==========================================================
-   DIALOG
-========================================================== */
-
+/* DIALOG */
 .contact-dialog {
     width: min(92vw, 550px);
     padding: 0;
@@ -436,10 +395,7 @@
     color: var(--primary);
 }
 
-/* ==========================================================
-   FORM
-========================================================== */
-
+/* FORM */
 .form-field {
     margin-bottom: 1rem;
 }
@@ -478,10 +434,7 @@
     margin-top: 1.5rem;
 }
 
-/* ==========================================================
-   TABLET
-========================================================== */
-
+/* TABLET */
 @media (max-width: 900px) {
     .profile-header {
         grid-template-columns: 1fr;
@@ -501,10 +454,7 @@
     }
 }
 
-/* ==========================================================
-   MOBILE
-========================================================== */
-
+/* MOBILE */
 @media (max-width: 600px) {
     .business-profile {
         padding-top: 1.25rem;
@@ -570,7 +520,6 @@
         width: 100%;
     }
 }
-
 
 /* REVIEWS */
 .reviews-section {
@@ -663,5 +612,3 @@
     background-color: #f8fafc;
     color: var(--text-light);
 }
-
-

@@ -86,6 +86,25 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* HERO IMAGE */
+    .hero-container {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
     /* HOMEPAGE CONTACT */
     .contact-content {
         grid-template-columns: 1fr;

@@ -93,6 +93,27 @@
         min-height: auto;
     }
 
+    /* HERO LAYOUT */
+    .hero-container {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .hero-content {
+        min-width: 0;
+    }
+
+    .hero-image {
+        display: block;
+    }
+
+    .hero-image img {
+        min-height: 420px;
+        max-height: 520px;
+        object-fit: cover;
+    }
+
     /* GENERAL SECTIONS */
     .section {
         padding: 5rem 0;

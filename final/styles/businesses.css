@@ -3,10 +3,7 @@
    Business Directory Styles
 ========================================================== */
 
-/* ==========================================================
-   DIRECTORY HERO
-========================================================== */
-
+/* DIRECTORY HERO */
 .directory-hero {
     padding: 4.5rem 0;
     background-color: var(--primary);
@@ -30,18 +27,12 @@
     font-size: 1.05rem;
 }
 
-/* ==========================================================
-   DIRECTORY
-========================================================== */
-
+/* DIRECTORY */
 .directory {
     background-color: var(--background);
 }
 
-/* ==========================================================
-   CONTROLS
-========================================================== */
-
+/* CONTROLS */
 .directory-controls {
     padding: 1.5rem;
     background-color: var(--surface);
@@ -87,10 +78,7 @@
     gap: 1rem;
 }
 
-/* ==========================================================
-   RESULTS SUMMARY
-========================================================== */
-
+/* RESULTS SUMMARY */
 .results-summary {
     display: flex;
     align-items: center;
@@ -107,20 +95,14 @@
     color: var(--primary);
 }
 
-/* ==========================================================
-   BUSINESS GRID
-========================================================== */
-
+/* BUSINESS GRID */
 .business-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-/* ==========================================================
-   BUSINESS CARD
-========================================================== */
-
+/* BUSINESS CARD */
 .business-card {
     overflow: hidden;
     display: flex;
@@ -137,10 +119,7 @@
     box-shadow: var(--shadow-medium);
 }
 
-/* ==========================================================
-   CARD IMAGE
-========================================================== */
-
+/* CARD IMAGE */
 .business-card-image {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -159,10 +138,7 @@
     transform: scale(1.03);
 }
 
-/* ==========================================================
-   CARD STATUS
-========================================================== */
-
+/* CARD STATUS */
 .business-status {
     position: absolute;
     top: 0.75rem;
@@ -179,10 +155,7 @@
     background-color: #64748b;
 }
 
-/* ==========================================================
-   CARD CONTENT
-========================================================== */
-
+/* CARD CONTENT */
 .business-card-content {
     display: flex;
     flex: 1;
@@ -246,10 +219,7 @@
     -webkit-box-orient: vertical;
 }
 
-/* ==========================================================
-   SERVICES
-========================================================== */
-
+/* SERVICES */
 .business-services {
     display: flex;
     flex-wrap: wrap;
@@ -266,10 +236,7 @@
     font-weight: 600;
 }
 
-/* ==========================================================
-   CARD FOOTER
-========================================================== */
-
+/* CARD FOOTER */
 .business-card-footer {
     display: flex;
     align-items: center;
@@ -296,10 +263,7 @@
     background-color: var(--secondary);
 }
 
-/* ==========================================================
-   STATUS MESSAGES
-========================================================== */
-
+/* STATUS MESSAGES */
 .directory-status {
     padding: 3rem 1rem;
     text-align: center;
@@ -339,10 +303,7 @@
 }
 
 
-/* ==========================================================
-   PAGINATION
-========================================================== */
-
+/* PAGINATION */
 .pagination {
     display: flex;
     align-items: center;
@@ -417,9 +378,7 @@
 }
 
 
-/* ==========================================================
-   TABLET
-========================================================== */
+/* TABLET */
 @media (max-width: 950px) {
     .business-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -430,9 +389,7 @@
     }
 }
 
-/* ==========================================================
-   MOBILE
-========================================================== */
+/* MOBILE */
 @media (max-width: 600px) {
     .directory-hero {
         padding: 3.5rem 0;

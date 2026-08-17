@@ -4,7 +4,6 @@
 /* Mobile-first base styles: 0–600px */
 
 /* COLOR VARIABLES */
-
 :root {
     --primary: #032441;
     --secondary: #055233;
@@ -22,14 +21,9 @@
 }
 
 /* RESET */
+* { box-sizing: border-box; }
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -52,9 +46,7 @@ select {
     font: inherit;
 }
 
-button {
-    cursor: pointer;
-}
+button { cursor: pointer; }
 
 a {
     color: inherit;
@@ -67,12 +59,7 @@ ul {
     list-style: none;
 }
 
-h1,
-h2,
-h3,
-p {
-    margin-top: 0;
-}
+h1, h2, h3, p { margin-top: 0; }
 
 h1,
 h2,
@@ -82,7 +69,6 @@ h3 {
 }
 
 /* GLOBAL CONTAINERS */
-
 .section-container,
 .header-container,
 .footer-container,
@@ -92,7 +78,6 @@ h3 {
 }
 
 /* HEADER */
-
 .site-header {
     position: sticky;
     top: 0;
@@ -142,8 +127,12 @@ h3 {
     display: inline-block;
 }
 
-/* MOBILE NAVIGATION */
+/* HERO IMAGE */
+.hero-image {
+    display: none;
+}
 
+/* MOBILE NAVIGATION */
 .primary-navigation {
     position: absolute;
     top: 68px;
@@ -214,7 +203,6 @@ h3 {
 }
 
 /* MENU / NOTIFICATION BUTTONS */
-
 .menu-button {
     display: grid;
     place-items: center;
@@ -364,7 +352,6 @@ h3 {
 }
 
 /* GENERAL SECTIONS */
-
 .section {
     padding: 4rem 0;
 }
@@ -387,7 +374,6 @@ h3 {
 }
 
 /* CATEGORIES */
-
 .categories {
     background-color: var(--surface);
 }
@@ -763,7 +749,6 @@ h3 {
 }
 
 /* CONTACT - HOMEPAGE */
-
 .contact {
     background-color: var(--surface);
 }
@@ -1030,10 +1015,7 @@ h3 {
     font-size: 0.9rem;
 }
 
-/* ==========================================================
-   FORM ACTION PAGE
-========================================================== */
-
+/* FORM ACTION PAGE */
 .form-action-page {
     padding: 3rem 1rem;
 }
@@ -1049,9 +1031,7 @@ h3 {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
-.form-action-card h1 {
-    margin-bottom: 0.75rem;
-}
+.form-action-card h1 { margin-bottom: 0.75rem; }
 
 .form-action-card > p:not(.section-label) {
     margin-bottom: 2rem;
@@ -1106,6 +1086,21 @@ h3 {
 .secondary-button:hover,
 .secondary-button:focus-visible {
     background-color: #eef5fa;
+}
+
+
+/* HOMEPAGE FEATURED BUSINESS STATES */
+.featured-loading,
+.featured-error {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.featured-error {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
 }
 
 
@@ -1193,7 +1188,6 @@ h3 {
 }
 
 /* FOCUS STATES */
-
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,

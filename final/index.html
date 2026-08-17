@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 901px)">
+    <link rel="stylesheet" href="styles/businesses.css">
 
     <!-- JavaScript -->
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/home.js"></script>
 </head>
 
 <body>
@@ -75,9 +77,10 @@
 
                     <h1>Find Trusted <span>Hands</span> Near You</h1>
 
-                    <p class="hero-description">Connect with trusted businesses and skilled professionals ready to provide the services you need.</p>
+                    <p class="hero-description">
+                        Connect with trusted businesses and skilled professionals ready to provide the services you need.
+                    </p>
 
-                    <!-- Search -->
                     <form class="hero-search" id="hero-search">
                         <div class="search-field">
                             <label for="service-search">What service do you need?</label>
@@ -91,6 +94,11 @@
 
                         <button class="search-button" type="submit">Search</button>
                     </form>
+                </div>
+
+                <!-- HERO IMAGE -->
+                <div class="hero-image">
+                    <img src="images/hero.webp" alt="Professional service provider helping a customer">
                 </div>
             </div>
         </section>
@@ -198,37 +206,11 @@
                     <a class="view-all-link" href="businesses.html">View All Businesses</a>
                 </div>
 
-                <!-- Business cards will be generated dynamically from businesses.json in a later phase. -->
-                <div class="featured-grid" id="featured-businesses">
-                    <article class="business-placeholder">
-                        <div class="placeholder-image">Business Image</div>
-
-                        <div class="placeholder-content">
-                            <p class="placeholder-category">Featured Business</p>
-                            <h3>Trusted Local Professionals</h3>
-                            <p>Business listings will appear here as they are loaded from the Express Hands data.</p>
-                        </div>
-                    </article>
-
-                    <article class="business-placeholder">
-                        <div class="placeholder-image">Business Image</div>
-
-                        <div class="placeholder-content">
-                            <p class="placeholder-category">Featured Business</p>
-                            <h3>Quality Services Near You</h3>
-                            <p>Discover reliable professionals and businesses in your area.</p>
-                        </div>
-                    </article>
-
-                    <article class="business-placeholder">
-                        <div class="placeholder-image">Business Image</div>
-
-                        <div class="placeholder-content">
-                            <p class="placeholder-category">Featured Business</p>
-                            <h3>Get the Job Done</h3>
-                            <p>Connect with professionals who are ready to help.</p>
-                        </div>
-                    </article>
+                <!-- Business cards will be generated dynamically from businesses.json -->
+                <div class="featured-grid" id="featured-businesses" aria-live="polite">
+                    <p class="featured-loading">
+                        Loading featured businesses...
+                    </p>
                 </div>
             </div>
         </section>
@@ -245,9 +227,7 @@
             </div>
         </section>      
 
-        <!-- ==========================================================
-            ABOUT US
-        ========================================================== -->
+        <!-- =ABOUT US -->
         <section class="about-section" id="about">
             <div class="section-container">
                 <div class="section-heading">
@@ -294,10 +274,7 @@
             </div>
         </section>
 
-        <!-- ==========================================================
-            CONTACT
-        ========================================================== -->
-
+        <!-- CONTACT -->
         <section class="contact-section" id="contact">
             <div class="section-container">
                 <div class="contact-grid">
@@ -452,13 +429,14 @@
                 <ul>
                     <li><a href="list-business.html">List Your Business</a></li>
                     <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
-            <p> <a href="https://byupathway.zoom.us/rec/play/4Zd-djZlRhCzmpY9Pxv0po2f2GkWvhgXZEmwcXDzDuunJmZxrmO0Kxe5dweIGSF6Ujg4IlX9gjcDAFE8.iydP-iUwmBW3GhaV?accessLevel=meeting&canPlayFromShare=true&from=my_recording&startTime=1786661976000&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fbyupathway.zoom.us%2Frec%2Fshare%2FN6LKSib5xmoPDh_lIMM9glWLqTkGo18w5aJmeuK6bwt-wDKeu7XmbYs6mzHJ1JSM.1YLh7qmsPiZOP8wJ%3FstartTime%3D1786661976000">Project video coode: </a>Zh&9n3H3</p>
+            <p> <a href="https://youtu.be/hsoZrsFE33E" target="_blank" rel="noopener noreferrer">Project video link</a></p>
         </div>
     </footer>
 </body>

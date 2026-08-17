@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Express Hands business listing submission confirmation.">
+    <meta name="description" content="Express Hands attribution and resource credits.">
     <meta name="author" content="Express Hands">
-    <meta property="og:title" content="Express Hands | Submission Received">
-    <meta property="og:description" content="Your Express Hands business listing information has been received.">
-    <meta property="og:type" content="website">
-    <title>Express Hands | Submission Received</title>
+    <title>Express Hands | Attributions</title>
     <link rel="icon" href="images/favicon.ico">
 
     <!-- Google Fonts -->
@@ -22,14 +19,10 @@
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 901px)">
 
     <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/form-action.js"></script>
 </head>
 
 <body>
-    <!-- ==================================================
-         HEADER
-    =================================================== -->
-
+    <!-- HEADER -->
     <header class="site-header">
         <div class="header-container">
             <a class="logo" href="index.html" aria-label="Express Hands home">
@@ -52,41 +45,52 @@
                 </ul>
             </nav>
 
-            <button class="notification-button" type="button" aria-label="Notifications">
+            <button class="notification-button" type="button" aria-label="Notifications" aria-expanded="false" aria-controls="notification-panel">
                 <span aria-hidden="true">🔔</span>
             </button>
         </div>
     </header>
 
-    <!-- ==================================================
-         MAIN
-    =================================================== -->
-
+    <!-- MAIN -->
     <main>
-        <section class="form-action-page">
+        <section class="attributions-page section">
             <div class="section-container">
-                <div class="form-action-card">
-                    <p class="section-label">SUBMISSION RECEIVED</p>
-                    <h1>Thank You for Listing Your Business</h1>
-                    <p>Your business information has been received by Express Hands.</p>
+                <div class="section-heading">
+                    <p class="section-label">EXPRESS HANDS</p>
+                    <h1>Attributions</h1>
+                    <p>This page acknowledges external resources used in the development of the Express Hands website.</p>
+                </div>
 
-                    <div class="submission-details" id="submission-details">
-                        <!-- JavaScript displays submitted data here -->
-                    </div>
+                <div class="attributions-content">
+                    <article class="attribution-card">
+                        <h2>Typography</h2>
+                        <p>Express Hands uses Poppins for headings and Open Sans for body text.</p>
+                        <p>Fonts provided by Google Fonts.</p>
+                        <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+                    </article>
 
-                    <div class="form-action-buttons">
-                        <a class="primary-button" href="businesses.html">Browse Businesses</a>
-                        <a class="secondary-button" href="list-business.html">List Another Business</a>
-                    </div>
+                    <article class="attribution-card">
+                        <h2>Images</h2>
+                        <p>Images used throughout the website are credited here according to their source and license requirements.</p>
+                        <p>Additional image credits will be added as external images are incorporated into the final project.</p>
+                    </article>
+
+                    <article class="attribution-card">
+                        <h2>Icons and Symbols</h2>
+                        <p>Interface symbols and emoji-style icons used in the project are provided directly through HTML text characters unless otherwise credited.</p>
+                    </article>
+
+                    <article class="attribution-card">
+                        <h2>Business Data</h2>
+                        <p>The business listings displayed on Express Hands are demonstration data created for this WDD 231 course project.</p>
+                        <p>The data is stored locally in the project's <code>businesses.json</code> file.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ==================================================
-         FOOTER
-    =================================================== -->
-
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -109,7 +113,7 @@
             </div>
 
             <div class="footer-links">
-                <h2>For Businesses</h2>
+                <h2>Resources</h2>
                 <ul>
                     <li><a href="list-business.html">List Your Business</a></li>
                     <li><a href="index.html#contact">Contact Us</a></li>
@@ -120,7 +124,6 @@
 
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> Express Hands. All rights reserved.</p>
-            <p> <a href="https://byupathway.zoom.us/rec/play/4Zd-djZlRhCzmpY9Pxv0po2f2GkWvhgXZEmwcXDzDuunJmZxrmO0Kxe5dweIGSF6Ujg4IlX9gjcDAFE8.iydP-iUwmBW3GhaV?accessLevel=meeting&canPlayFromShare=true&from=my_recording&startTime=1786661976000&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fbyupathway.zoom.us%2Frec%2Fshare%2FN6LKSib5xmoPDh_lIMM9glWLqTkGo18w5aJmeuK6bwt-wDKeu7XmbYs6mzHJ1JSM.1YLh7qmsPiZOP8wJ%3FstartTime%3D1786661976000">Project video coode: </a>Zh&9n3H3</p>
         </div>
     </footer>
 </body>
